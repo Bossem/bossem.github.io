@@ -1,0 +1,110 @@
+* {
+    font-family: Tahoma;
+}
+
+body {
+    margin: 0%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2,
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.price {
+    font-size: 48px;
+    /* margin-top: 100px; */
+}
+
+.by {
+    margin-right: 40px;
+}
+
+.section1 {
+    display: flex;
+    /* background-color: rgb(203, 229, 230); */
+    /* Направление оси блоков слева направо */
+    flex-direction: row;
+    /* расположение блоков вдоль оси */
+    justify-content: space-around;
+    /* выравнивание по центру поперечной оси */
+    align-items: center;
+    width: 90%;
+    height: 800px;
+    margin: auto;
+}
+
+
+/* резиновая картинка */
+
+.box1 {
+    width: 30%;
+}
+
+.box1 img {
+    width: 100%;
+}
+
+.box2 {
+    width: 40%;
+    margin-bottom: 100px;
+}
+
+
+/* .section2 {
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 280px;
+    margin: auto;
+    text-align: center;
+} */
+
+.section2 {
+    display: flex;
+    height: 400px;
+    background-color: #f2f2f2;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+}
+
+.wrapper>div p {
+    font-family: Arial;
+}
+
+.title2 {
+    text-align: center;
+}
+
+.section4 {
+    height: 400px;
+}
+
+button {
+    background-color: #f05a22;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
