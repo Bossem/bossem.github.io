@@ -1,5 +1,5 @@
 {
-  "name": "lesson-14",
+  "name": "lesson-13",
   "version": "1.0.0",
   "description": "bossem.github.io",
   "main": "index.js",
@@ -14,5 +14,6 @@
   "dependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2"
-  }
+	}
+
 }

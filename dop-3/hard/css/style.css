@@ -106,7 +106,8 @@ img {
   margin-top: 37px;
   font-size: 19px;
   font-weight: 700;
-  line-height: 20px;
+	line-height: 20px;
+	cursor: pointer;
 }
 
 .block__list {
