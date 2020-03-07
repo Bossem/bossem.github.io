@@ -12,11 +12,10 @@ function bs() {
     });
     watch("./*.html").on('change', browserSync.reload);
     watch("./sass/**/*.sass", serveSass);
-    watch("./sass/**/*.scss", serveSass);
-     watch("./js/*.js").on('change', browserSync.reload);
+    watch("./js/*.js").on('change', browserSync.reload);
 };
 function serveSass() {
-    return src("./sass/**/.sass,./sass/**/.scss)
+    return src("./sass/*.sass")
         .pipe(sass())
         .pipe(dest("./css"))
         .pipe(browserSync.stream());
