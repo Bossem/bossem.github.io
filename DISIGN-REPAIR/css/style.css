@@ -310,6 +310,5 @@ template {
   .menu {
     display: flex;
     justify-content: space-between; }
-  
-  .header {
-    background-color: #131313; }
+    .header {
+      background-color: #131313; }
