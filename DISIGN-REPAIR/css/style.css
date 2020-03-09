@@ -307,9 +307,9 @@ template {
   max-width: 1256px;
   margin: auto; }
 
-.menu {
-  display: flex;
-    display-justify-content: space-between; }
-
-.header {
-  background-color: #131313; }
+  .menu {
+    display: flex;
+    justify-content: space-between; }
+  
+  .header {
+    background-color: #131313; }
