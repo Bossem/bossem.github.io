@@ -12,13 +12,6 @@
   font-style: normal;
   font-display: wrap; }
 
-@font-face {
-  font-family: 'Yeseva One Regular';
-  src: url("../fonts/YesevaOne-Regular.woff") format("woff"), url("../fonts/YesevaOne-Regular.woff2") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: wrap; }
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -325,48 +318,6 @@ template {
 [hidden] {
   display: none; }
 
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-html {
-  font-size: 14px; }
-
-body {
-  font-family: 'Futura Book', sans-serif;
-  font-weight: 400;
-  font-size: 1rem; }
-
-img {
-  max-width: 100%; }
-
-.section {
-  padding: 70px 0; }
-  .section-title {
-    text-align: center;
-    text-transform: uppercase; }
-    .section-title__heading {
-      font-family: 'Yeseva One Regular', serif;
-      font-weight: 400;
-      font-size: 1.42rem;
-      letter-spacing: 0; }
-    .section-title__image {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .section-title__image::before, .section-title__image::after {
-        content: '';
-        margin: 0 10px;
-        width: 32px;
-        height: 2px;
-        border-radius: 2px;
-        background-color: #E3B873; }
-  .section-description {
-    font-family: 'Futura Book', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #131313; }
-
 .button {
   padding: 11px 24px;
   font-size: 0.93rem;
@@ -404,6 +355,47 @@ img {
   -webkit-animation: show 2s easy 2s infinite;
   animation: show 2s easy 2s infinite; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1rem; }
+
+img {
+  max-width: 100%; }
+
+.section {
+  padding: 70px 0; }
+  .section-title {
+    font-family: 'Yeseva One', cursive, serif;
+    text-align: center;
+    text-transform: uppercase; }
+    .section-title__heading {
+      font-size: 1.42rem;
+      font-weight: 400;
+      letter-spacing: 0; }
+    .section-title__image {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        margin: 0 10px;
+        width: 32px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #E3B873; }
+  .section-description {
+    font-family: 'Futura Book', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #131313; }
+
 .header {
   position: fixed;
   left: 0;
@@ -422,7 +414,7 @@ img {
   letter-spacing: 0;
   text-transform: uppercase; }
   .logo__link {
-    font-family: 'Futura Demi', sans-serif;
+    font-family: 'Futura Demi';
     font-weight: 400;
     color: #E3B873;
     text-decoration: none; }
@@ -430,7 +422,7 @@ img {
       text-decoration: underline; }
 
 .nav__item {
-  margin-right: 2.3rem;
+  margin-right: 2.6rem;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0;
@@ -479,12 +471,12 @@ img {
   .hero__title {
     margin: 0 0 1.2rem 0; }
   .hero__text {
-    font-family: 'Futura Book', sans-serif;
-    font-weight: 400;
+    font-family: 'Futura Book';
     margin: 0 0 3.1rem 0;
-    max-width: 35.7rem;
+    max-width: 500px;
     font-size: 1.571rem;
-    line-height: 137%; }
+    line-height: 137%;
+    font-weight: 400; }
   .hero__button {
     margin-right: 16px;
     padding: 19px 28px; }
@@ -514,7 +506,7 @@ img {
     .hero__scroll-down:hover {
       color: #E3B873; }
   .hero .scroll-down {
-    font-family: 'Yeseva One Regular', serif;
+    font-family: 'Yeseva One';
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 2px; }
@@ -544,8 +536,7 @@ img {
       background-color: #E3B873; }
 
 .title {
-  font-family: 'Yeseva One Regular', serif;
-  font-weight: 400;
+  font-family: 'Yeseva One', cursive;
   font-size: 2.857rem;
   line-height: 132%;
   font-weight: 400;
@@ -575,7 +566,7 @@ img {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .card__title {
-    font-family: 'Yeseva One Regular', serif;
+    font-family: 'Yeseva One', cursive, sans-serif;
     font-weight: 400;
     font-size: 1.29rem;
     margin-top: 0;
@@ -592,21 +583,24 @@ img {
     bottom: -1.79rem;
     padding: 1.214rem 2.9rem;
     font-size: 1.29rem;
-    font-family: 'Yeseva One Regular', serif;
+    font-family: 'Yeseva One', cursive, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
-    background-color: #E3B873;
-    cursor: pointer;
-    transition: 0.5s;
-    transition: color 0.8s; }
+    background-color: #E3B873; }
     .card__pricetag--second {
       padding: 1.214rem 2.6rem; }
     .card__pricetag--last {
       padding: 1.214rem 2.5rem; }
-    .card__pricetag:hover {
-      background-color: #FFE7C1;
-      color: #131313; }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .card__text {
+    margin-left: 0; } }
 
 .design {
   padding: 70px 0 70px 0; }
@@ -628,7 +622,7 @@ img {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .design-card__title {
-    font-family: 'Yeseva One Regular', serif;
+    font-family: 'Yeseva One', cursive, sans-serif;
     font-weight: 400;
     font-size: 1.29rem;
     margin-top: 0;
@@ -645,31 +639,25 @@ img {
     bottom: -1.79rem;
     padding: 1.214rem 5.6rem 1.214rem 2.5rem;
     font-size: 1.29rem;
-    font-family: 'Yeseva One Regular', serif;
+    font-family: 'Yeseva One', cursive, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
-    background-color: #E3B873;
-    cursor: pointer;
-    transition: 0.5s;
-    transition: color 0.8s; }
+    background-color: #E3B873; }
     .design-card__pricetag--second {
       padding: 1.214rem 5.4rem 1.214rem 2.5rem; }
     .design-card__pricetag--last {
       padding: 1.214rem 5.3rem 1.214rem 2.5rem; }
-    .design-card__pricetag:hover {
-      background-color: #FFE7C1;
-      color: #131313; }
+
+@media screen and (min-width: 1200px) {
+  .nav__item {
+    margin-right: 2.3rem; } }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 1rem; }
-  .card__text {
-    margin: -6.45rem auto 0 auto; }
-  .design-card__text {
-    margin: -6.45rem auto 0 auto; } }
+    margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -685,46 +673,24 @@ img {
 
 @media screen and (max-width: 767px) {
   .row {
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly; }
-    .row__design {
-      align-items: flex-start; }
-  .col {
-    flex-basis: 40%; }
-  .card__text {
-    margin: -4.45rem auto 0 auto;
-    max-width: 18rem;
-    min-width: 211px; }
+    flex-direction: column;
+    align-items: center; }
   .types__card {
     margin-bottom: 5rem; }
+  .card__text {
+    max-width: 23.57rem;
+    margin-left: 0; }
   .design-card {
     margin-bottom: 5rem; }
   .design-card__text {
     max-width: 23.57rem;
-    margin-left: 0; }
-  .design__section-description {
-    font-size: 1.5rem; }
-  .design-card__pricetag {
-    padding: 1.214rem 4.4rem 1.214rem 2.5rem; }
-    .design-card__pricetag--second {
-      padding: 1.214rem 4.4rem 1.214rem 2.5rem; }
-    .design-card__pricetag--last {
-      padding: 1.214rem 4.3rem 1.214rem 2.5rem; } }
+    margin-left: 0; } }
 
 @media screen and (max-height: 620px) {
   .hero__scroll-down {
     display: none; } }
 
 @media screen and (max-width: 576px) {
-  .row {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center; }
-  .card__text {
-    margin: -4.45rem auto 0 0;
-    max-width: 23.57rem; }
   .contacts__button {
     display: none; }
   .contacts__phone {
@@ -749,4 +715,4 @@ img {
   .button {
     padding: 19px 69px; }
   .design__section-description {
-    font-size: 1.2rem; } }
+    font-size: 1.1rem; } }

@@ -17,10 +17,11 @@
     margin: -9.45rem auto 0 auto
     padding: 1.79rem 2.14rem
     text-align: left
-    background-color: $light
+    background-color: #fff
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
   &__title
-    +font-YesevaOne
+    font-family: 'Yeseva One', cursive, sans-serif
+    font-weight: 400
     font-size: 1.29rem
     margin-top: 0
     margin-bottom: 0.7rem
@@ -36,17 +37,25 @@
     bottom: -1.79rem
     padding: 1.214rem 2.9rem
     font-size: 1.29rem
-    +font-YesevaOne
+    font-family: 'Yeseva One', cursive, sans-serif
+    font-weight: 400
     text-transform: uppercase
     color: $light
     background-color: $primary
-    cursor: pointer
-    transition: 0.5s
-    transition: color 0.8s
     &--second
       padding: 1.214rem 2.6rem
     &--last
       padding: 1.214rem 2.5rem
-    &:hover
-      background-color: $hoverColor
-      color: $dark
+
+@media screen and (max-width: 760px)
+  .row
+    flex-direction: column
+    align-items: center
+
+  .types
+    &__card
+      margin-bottom: 5rem
+
+  .card
+    &__text
+      margin-left: 0

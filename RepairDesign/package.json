@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bossem/bossem.github.io/tree/master/RepairDesig.git"
+    "url": ""
   },
-  "author": "denrybaakov",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bossem/bossem.github.io/tree/master/RepairDesig"
+    "url": ""
   },
-  "homepage": "https://github.com/Bossem/bossem.github.io/tree/master/RepairDesig#readme",
+  "homepage": "",
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",

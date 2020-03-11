@@ -3,7 +3,7 @@
 html
   font-size: 14px
 body
-  +font-FuturaBook
+  font-family: 'Futura Book', sans-serif
   font-size: 1rem
 
 img
@@ -12,13 +12,12 @@ img
 .section
   padding: 70px 0
   &-title
-    // font-family: 'Yeseva One Regular', cursive, serif
-
+    font-family: 'Yeseva One', cursive, serif
     text-align: center
     text-transform: uppercase
     &__heading
-      +font-YesevaOne
       font-size: 1.42rem
+      font-weight: 400
       letter-spacing: 0
     &__image
       display: flex
@@ -32,7 +31,8 @@ img
         border-radius: 2px
         background-color: $primary
   &-description
-    +font-FuturaBook
+    font-family: 'Futura Book', sans-serif
     font-size: 20px
+    font-weight: 400
     line-height: 27px
     color: $dark
