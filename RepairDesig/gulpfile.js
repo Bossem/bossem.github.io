@@ -20,7 +20,7 @@ function bs() {
     server: {
       baseDir: "./"
     },
-    
+    browser: '',
     notify: false
   });
   watch("./*.html").on('change', browserSync.reload);
@@ -52,4 +52,5 @@ function minCss(done) {
 
 exports.serve = bs;
 exports.minCss = minCss;
+
 

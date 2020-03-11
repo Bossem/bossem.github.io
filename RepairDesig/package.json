@@ -1,5 +1,5 @@
 {
-  "name": "repairdesig",
+  "name": "repairdesign",
   "version": "1.0.0",
   "description": "landing-page",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bossem/bossem.github.io"
+    "url": "git+https://github.com/Bossem/bossem.github.io/tree/master/RepairDesig.git"
   },
   "author": "denrybaakov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bossem/bossem.github.io"
+    "url": "https://github.com/Bossem/bossem.github.io/tree/master/RepairDesig"
   },
-  "homepage": "https://bossem.github.io/",
+  "homepage": "https://github.com/Bossem/bossem.github.io/tree/master/RepairDesig#readme",
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "gulp-install": "^1.1.0",
     "js-yaml": "^3.13.1"
   }
 }
