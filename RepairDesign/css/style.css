@@ -12,6 +12,13 @@
   font-style: normal;
   font-display: wrap; }
 
+@font-face {
+  font-family: 'Yeseva One Regular';
+  src: url("../fonts/YesevaOne-Regular.woff") format("woff"), url("../fonts/YesevaOne-Regular.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: wrap; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -346,6 +353,51 @@ template {
       color: #131313;
       background-color: #fff; }
 
+.label {
+  font-family: 'Futura Book', sans-serif;
+  font-weight: 400;
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  padding: 0.5rem 0;
+  font-size: 1.285rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3); }
+  .input::-webkit-input-placeholder {
+    color: #fff; }
+  .input::-moz-placeholder {
+    color: #fff; }
+  .input:-ms-input-placeholder {
+    color: #fff; }
+  .input::-ms-input-placeholder {
+    color: #fff; }
+  .input::placeholder {
+    color: #fff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url(../img/check.svg) no-repeat center/0.9rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  font-family: 'Futura Book', sans-serif;
+  font-weight: 400; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    margin-right: 0.60rem;
+    border: 1px solid #E3B873;
+    border-radius: 2px;
+    cursor: pointer; }
+
 .container {
   max-width: 1256px;
   width: 85%;
@@ -363,6 +415,7 @@ html {
 
 body {
   font-family: 'Futura Book', sans-serif;
+  font-weight: 400;
   font-size: 1rem; }
 
 img {
@@ -371,12 +424,12 @@ img {
 .section {
   padding: 70px 0; }
   .section-title {
-    font-family: 'Yeseva One', cursive, serif;
     text-align: center;
     text-transform: uppercase; }
     .section-title__heading {
-      font-size: 1.42rem;
+      font-family: 'Yeseva One Regular', serif;
       font-weight: 400;
+      font-size: 1.42rem;
       letter-spacing: 0; }
     .section-title__image {
       display: flex;
@@ -391,8 +444,8 @@ img {
         background-color: #E3B873; }
   .section-description {
     font-family: 'Futura Book', sans-serif;
-    font-size: 20px;
     font-weight: 400;
+    font-size: 20px;
     line-height: 27px;
     color: #131313; }
 
@@ -414,7 +467,7 @@ img {
   letter-spacing: 0;
   text-transform: uppercase; }
   .logo__link {
-    font-family: 'Futura Demi';
+    font-family: 'Futura Demi', sans-serif;
     font-weight: 400;
     color: #E3B873;
     text-decoration: none; }
@@ -422,7 +475,7 @@ img {
       text-decoration: underline; }
 
 .nav__item {
-  margin-right: 2.6rem;
+  margin-right: 2.3rem;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0;
@@ -471,12 +524,12 @@ img {
   .hero__title {
     margin: 0 0 1.2rem 0; }
   .hero__text {
-    font-family: 'Futura Book';
+    font-family: 'Futura Book', sans-serif;
+    font-weight: 400;
     margin: 0 0 3.1rem 0;
-    max-width: 500px;
+    max-width: 35.7rem;
     font-size: 1.571rem;
-    line-height: 137%;
-    font-weight: 400; }
+    line-height: 137%; }
   .hero__button {
     margin-right: 16px;
     padding: 19px 28px; }
@@ -506,7 +559,7 @@ img {
     .hero__scroll-down:hover {
       color: #E3B873; }
   .hero .scroll-down {
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 2px; }
@@ -536,7 +589,8 @@ img {
       background-color: #E3B873; }
 
 .title {
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Yeseva One Regular', serif;
+  font-weight: 400;
   font-size: 2.857rem;
   line-height: 132%;
   font-weight: 400;
@@ -566,7 +620,7 @@ img {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .card__title {
-    font-family: 'Yeseva One', cursive, sans-serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 1.29rem;
     margin-top: 0;
@@ -583,24 +637,21 @@ img {
     bottom: -1.79rem;
     padding: 1.214rem 2.9rem;
     font-size: 1.29rem;
-    font-family: 'Yeseva One', cursive, sans-serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
-    background-color: #E3B873; }
+    background-color: #E3B873;
+    cursor: pointer;
+    transition: 0.5s;
+    transition: color 0.8s; }
     .card__pricetag--second {
       padding: 1.214rem 2.6rem; }
     .card__pricetag--last {
       padding: 1.214rem 2.5rem; }
-
-@media screen and (max-width: 760px) {
-  .row {
-    flex-direction: column;
-    align-items: center; }
-  .types__card {
-    margin-bottom: 5rem; }
-  .card__text {
-    margin-left: 0; } }
+    .card__pricetag:hover {
+      background-color: #FFE7C1;
+      color: #131313; }
 
 .design {
   padding: 70px 0 70px 0; }
@@ -622,7 +673,7 @@ img {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .design-card__title {
-    font-family: 'Yeseva One', cursive, sans-serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 1.29rem;
     margin-top: 0;
@@ -639,25 +690,86 @@ img {
     bottom: -1.79rem;
     padding: 1.214rem 5.6rem 1.214rem 2.5rem;
     font-size: 1.29rem;
-    font-family: 'Yeseva One', cursive, sans-serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
-    background-color: #E3B873; }
+    background-color: #E3B873;
+    cursor: pointer;
+    transition: 0.5s;
+    transition: color 0.8s; }
     .design-card__pricetag--second {
       padding: 1.214rem 5.4rem 1.214rem 2.5rem; }
     .design-card__pricetag--last {
       padding: 1.214rem 5.3rem 1.214rem 2.5rem; }
+    .design-card__pricetag:hover {
+      background-color: #FFE7C1;
+      color: #131313; }
 
-@media screen and (min-width: 1200px) {
-  .nav__item {
-    margin-right: 2.3rem; } }
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 19, 19, 0.6);
+  z-index: 199; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #fff;
+    background: #131313 url(../img/bg-lines.svg) no-repeat center; }
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    margin: 12px;
+    background: transparent url(../img/x-circle.svg) no-repeat center;
+    border: none;
+    cursor: pointer; }
+    .modal__close:hover {
+      background: transparent url(../img/x-circle2.svg) no-repeat center; }
+  .modal__title {
+    margin: 0 0 2.428rem 0;
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
+    font-size: 1.356rem;
+    text-align: center; }
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; }
+  .modal__input {
+    margin-bottom: 3.482rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end; }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .card__text {
+    margin: -6.45rem auto 0 auto; }
+  .design-card__text {
+    margin: -6.45rem auto 0 auto; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -673,24 +785,46 @@ img {
 
 @media screen and (max-width: 767px) {
   .row {
-    flex-direction: column;
-    align-items: center; }
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; }
+    .row__design {
+      align-items: flex-start; }
+  .col {
+    flex-basis: 40%; }
+  .card__text {
+    margin: -4.45rem auto 0 auto;
+    max-width: 18rem;
+    min-width: 211px; }
   .types__card {
     margin-bottom: 5rem; }
-  .card__text {
-    max-width: 23.57rem;
-    margin-left: 0; }
   .design-card {
     margin-bottom: 5rem; }
   .design-card__text {
     max-width: 23.57rem;
-    margin-left: 0; } }
+    margin-left: 0; }
+  .design__section-description {
+    font-size: 1.5rem; }
+  .design-card__pricetag {
+    padding: 1.214rem 4.4rem 1.214rem 2.5rem; }
+    .design-card__pricetag--second {
+      padding: 1.214rem 4.4rem 1.214rem 2.5rem; }
+    .design-card__pricetag--last {
+      padding: 1.214rem 4.3rem 1.214rem 2.5rem; } }
 
 @media screen and (max-height: 620px) {
   .hero__scroll-down {
     display: none; } }
 
 @media screen and (max-width: 576px) {
+  .row {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; }
+  .card__text {
+    margin: -4.45rem auto 0 0;
+    max-width: 23.57rem; }
   .contacts__button {
     display: none; }
   .contacts__phone {
@@ -715,4 +849,4 @@ img {
   .button {
     padding: 19px 69px; }
   .design__section-description {
-    font-size: 1.1rem; } }
+    font-size: 1.2rem; } }

@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/Bossem/bossem.github.io"
   },
-  "author": "",
+  "author": "denrybaakov",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Bossem/bossem.github.io/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/Bossem/bossem.github.ioreadme",
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
