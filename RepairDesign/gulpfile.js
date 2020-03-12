@@ -14,7 +14,6 @@ const del = require('del');
 
 
 // Static server
-// Static server
 function bs() {
   serveSass();
   browserSync.init({

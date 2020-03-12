@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https:/bossem.github.io/RepairDesign/v/RepairDesign.git"
+    "url": "git+https://bossem.github.io/RepairDesign.git"
   },
   "author": "denrybaakov",
   "license": "ISC",
   "bugs": {
-    "url": "https:/bossem.github.io/RepairDesign//issues"
+    "url": "https://bossem.github.io/RepairDesign/issues"
   },
-  "homepage": "https://bossem.github.io/RepairDesign/#readme",
+  "homepage": "https://bossem.github.io/RepairDesign#readme",
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
