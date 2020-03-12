@@ -325,6 +325,10 @@ template {
 [hidden] {
   display: none; }
 
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #fff; }
+
 .button {
   padding: 11px 24px;
   font-size: 0.93rem;
@@ -333,6 +337,9 @@ template {
   border-radius: 2px; }
   .button:hover {
     cursor: pointer; }
+  .button:active {
+    outline: none;
+    box-shadow: none; }
   .button--primary {
     background-color: #E3B873;
     color: #fff;
@@ -344,6 +351,9 @@ template {
       color: #131313;
       background-color: #FFE7C1;
       box-shadow: none; }
+    .button--primary:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #E3B873; }
   .button--outline {
     border: 1px solid #fff;
     color: #fff;
@@ -352,6 +362,9 @@ template {
     .button--outline:hover {
       color: #131313;
       background-color: #fff; }
+    .button--outline:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #fff; }
 
 .label {
   font-family: 'Futura Book', sans-serif;
@@ -397,6 +410,23 @@ template {
     border: 1px solid #E3B873;
     border-radius: 2px;
     cursor: pointer; }
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 0.3rem;
+  width: 39px;
+  height: 39px;
+  cursor: pointer; }
+  .scroll-top__button {
+    background: #131313 url(../img/scrollTop.svg) no-repeat center center;
+    border-radius: 50%;
+    cursor: pointer; }
+    .scroll-top__button--hidden {
+      opacity: 1;
+      visibility: hidden; }
+    .scroll-top__button:hover {
+      background: #131313 url(../img/scrollTop2.svg) no-repeat center center; }
 
 .container {
   max-width: 1256px;
@@ -729,7 +759,8 @@ img {
     max-width: 36.36rem;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff;
-    background: #131313 url(../img/bg-lines.svg) no-repeat center; }
+    background: #131313 url(../img/bg-lines.svg) no-repeat center;
+    z-index: 999; }
   .modal__close {
     position: absolute;
     top: 0;
@@ -740,6 +771,8 @@ img {
     background: transparent url(../img/x-circle.svg) no-repeat center;
     border: none;
     cursor: pointer; }
+    .modal__close:focus {
+      outline: none; }
     .modal__close:hover {
       background: transparent url(../img/x-circle2.svg) no-repeat center; }
   .modal__title {
@@ -754,11 +787,14 @@ img {
     align-self: flex-start; }
   .modal__input {
     margin-bottom: 3.482rem; }
+    .modal__input:focus {
+      outline: none; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
+    padding: 19px 34px;
     align-self: flex-end; }
 
 @media screen and (max-width: 1200px) {
@@ -848,5 +884,10 @@ img {
     display: none; }
   .button {
     padding: 19px 69px; }
-  .design__section-description {
-    font-size: 1.2rem; } }
+  .design {
+    background-color: #131313; }
+    .design__section-title {
+      color: #fff; }
+    .design__section-description {
+      color: #fff;
+      font-size: 1.2rem; } }
