@@ -8,26 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bossem.github.io/RepairDesign.git"
+    "url": "git+https://bossem.github.io/RepairDesign/"
   },
-  "author": "denrybaakov",
+  "author": "Bossem",
   "license": "ISC",
   "bugs": {
-    "url": "https://bossem.github.io/RepairDesign/issues"
+    "url": "https://bossem.github.io/RepairDesign/"
   },
-  "homepage": "https://bossem.github.io/RepairDesign#readme",
+  "homepage": "bossem.github.io/RepairDesign/#readme",
   "devDependencies": {
-    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
-    "gulp-cssbeautify": "^2.0.1",
-    "gulp-cssnano": "^2.1.3",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7",
-    "js-yaml": "^3.13.1"
+    "browser-sync": "^2.26.7"
   }
 }

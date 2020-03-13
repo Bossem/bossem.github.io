@@ -1,21 +1,14 @@
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: wrap; }
 
 @font-face {
   font-family: 'Futura Demi';
   src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: wrap; }
-
-@font-face {
-  font-family: 'Yeseva One Regular';
-  src: url("../fonts/YesevaOne-Regular.woff") format("woff"), url("../fonts/YesevaOne-Regular.woff2") format("woff");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: wrap; }
 
@@ -325,117 +318,102 @@ template {
 [hidden] {
   display: none; }
 
-a:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #fff; }
-
 .button {
-  padding: 11px 24px;
-  font-size: 0.93rem;
-  text-transform: uppercase;
   border: none;
-  border-radius: 2px; }
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 0.929rem;
+  font-weight: 500;
+  letter-spacing: 0.025rem; }
   .button:hover {
     cursor: pointer; }
-  .button:active {
-    outline: none;
-    box-shadow: none; }
   .button--primary {
+    padding: 1.214rem 1.857rem 1.286rem 1.857rem;
     background-color: #E3B873;
-    color: #fff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s;
-    transition: background-color 0.3s;
-    transition: color 0.5s; }
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
     .button--primary:hover {
-      color: #131313;
-      background-color: #FFE7C1;
       box-shadow: none; }
-    .button--primary:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px #E3B873; }
   .button--outline {
-    border: 1px solid #fff;
-    color: #fff;
+    padding: 1.214rem 2.571rem 1.286rem 2.857rem;
+    border: 1px solid #ffffff;
     background-color: transparent;
-    transition: 0.4s; }
-    .button--outline:hover {
-      color: #131313;
-      background-color: #fff; }
-    .button--outline:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px #fff; }
+    color: #ffffff; }
 
 .label {
-  font-family: 'Futura Book', sans-serif;
-  font-weight: 400;
   font-size: 1.07rem; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
 
 .input {
-  padding: 0.5rem 0;
-  font-size: 1.285rem;
-  color: #fff;
-  background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3); }
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  background-color: transparent;
+  font-size: 1.285rem;
+  color: #ffffff;
+  padding: 0.53rem 0; }
   .input::-webkit-input-placeholder {
-    color: #fff; }
+    color: #ffffff; }
   .input::-moz-placeholder {
-    color: #fff; }
+    color: #ffffff; }
   .input:-ms-input-placeholder {
-    color: #fff; }
+    color: #ffffff; }
   .input::-ms-input-placeholder {
-    color: #fff; }
+    color: #ffffff; }
   .input::placeholder {
-    color: #fff; }
+    color: #ffffff; }
 
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
   .policy__checkbox:checked + .policy__label::before {
-    background: #E3B873 url(../img/check.svg) no-repeat center/0.9rem; }
+    background-color: #E3B873;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center; }
 
 .policy__label {
   display: flex;
   align-items: center;
-  font-family: 'Futura Book', sans-serif;
-  font-weight: 400; }
+  font-size: 1.143rem; }
   .policy__label::before {
     content: '';
     width: 18px;
     height: 18px;
-    margin-right: 0.60rem;
     border: 1px solid #E3B873;
-    border-radius: 2px;
-    cursor: pointer; }
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
 
-.scroll-top {
+.scrollup {
   position: fixed;
-  bottom: 2rem;
-  right: 0.3rem;
-  width: 39px;
-  height: 39px;
-  cursor: pointer; }
-  .scroll-top__button {
-    background: #131313 url(../img/scrollTop.svg) no-repeat center center;
+  display: hidden;
+  opacity: 0;
+  right: 20px;
+  bottom: 20px; }
+  .scrollup--visible {
+    display: visible;
+    opacity: 1; }
+  .scrollup__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    cursor: pointer; }
-    .scroll-top__button--hidden {
-      opacity: 1;
-      visibility: hidden; }
-    .scroll-top__button:hover {
-      background: #131313 url(../img/scrollTop2.svg) no-repeat center center; }
+    border: 1px solid black;
+    background-color: rgba(30, 30, 30, 0.5);
+    cursor: pointer;
+    color: #E3B873;
+    font-size: 18px;
+    font-weight: bold; }
 
 .container {
-  max-width: 1256px;
   width: 85%;
-  margin: 0 auto; }
-
-.block {
-  -webkit-animation: show 2s easy 2s infinite;
-  animation: show 2s easy 2s infinite; }
+  max-width: 1256px;
+  width: 100%;
+  margin: auto; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -445,452 +423,409 @@ html {
 
 body {
   font-family: 'Futura Book', sans-serif;
-  font-weight: 400;
   font-size: 1rem; }
 
 img {
   max-width: 100%; }
 
 .section {
-  padding: 70px 0; }
+  padding: 60px 0; }
   .section-title {
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive; }
     .section-title__heading {
-      font-family: 'Yeseva One Regular', serif;
-      font-weight: 400;
-      font-size: 1.42rem;
-      letter-spacing: 0; }
+      font-size: 1.428rem;
+      font-weight: normal; }
     .section-title__image {
       display: flex;
-      align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      align-items: center; }
       .section-title__image::before, .section-title__image::after {
         content: '';
-        margin: 0 10px;
         width: 32px;
         height: 2px;
-        border-radius: 2px;
+        margin: 0 10px;
         background-color: #E3B873; }
-  .section-description {
-    font-family: 'Futura Book', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #131313; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9.5rem;
+  padding: 1.79rem 2.14rem;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.285rem; }
+
+.card__list {
+  padding: 0 0 0 1rem;
+  margin: 0;
+  margin-bottom: 2.5rem;
+  flex: 1.071rem;
+  line-height: 1.8571rem;
+  letter-spacing: 0.04rem;
+  color: #959595; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.79rem;
+  width: 16.285rem;
+  font-size: 1.29rem;
+  font-weight: normal;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #ffffff; }
 
 .header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  padding: 24px 0;
+  z-index: 99;
   background-color: #131313;
-  z-index: 99; }
+  padding: 1.714rem 0; }
 
 .menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; }
+  .menu__nav {
+    margin-left: auto; }
+  .menu__contacts {
+    margin-left: 9.143rem; }
 
 .logo {
-  letter-spacing: 0;
-  text-transform: uppercase; }
-  .logo__link {
-    font-family: 'Futura Demi', sans-serif;
-    font-weight: 400;
-    color: #E3B873;
-    text-decoration: none; }
-    .logo__link:hover {
-      text-decoration: underline; }
+  color: #E3B873;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.033rem; }
 
 .nav__item {
-  margin-right: 2.3rem;
-  text-transform: uppercase;
+  color: #ffffff;
   text-decoration: none;
-  letter-spacing: 0;
-  color: #fff;
-  transition: color 0.3s; }
-  .nav__item:last-child {
-    margin-right: 0; }
+  text-transform: uppercase;
+  transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
+  .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
+    margin-left: 2.643rem; }
 
 .phone {
   color: #E3B873; }
-  .phone:hover {
-    text-decoration: none; }
 
 .contacts__phone {
-  margin-right: 42px; }
+  margin-right: 3.143rem; }
+
+.contacts__button {
+  padding: 0.786rem 1.571rem 0.786rem 1.5rem; }
 
 .hero {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   padding-top: 100px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  background: url("../img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 100vh;
-  color: #fff; }
+  color: #ffffff; }
   .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero__content {
+    position: relative;
+    max-width: 47.857rem;
+    margin-left: 4.286rem; }
+  .hero__text {
+    font-size: 1.571rem;
+    line-height: 2.143rem;
+    max-width: 35.714rem;
+    margin: 1.143rem 0 3.214rem 0; }
+  .hero__button {
+    margin-right: 1.143rem;
+    letter-spacing: 0.02rem; }
   .hero__instagram {
     position: absolute;
     left: 0;
     top: 0;
     max-width: 80px;
-    height: 100vh; }
-  .hero__content {
-    position: relative;
-    max-width: 47.85rem;
-    margin-left: 4.28rem; }
-  .hero__title {
-    margin: 0 0 1.2rem 0; }
-  .hero__text {
-    font-family: 'Futura Book', sans-serif;
-    font-weight: 400;
-    margin: 0 0 3.1rem 0;
-    max-width: 35.7rem;
-    font-size: 1.571rem;
-    line-height: 137%; }
-  .hero__button {
-    margin-right: 16px;
-    padding: 19px 28px; }
-  .hero .button--outline {
-    padding: 17px 46px; }
+    height: 100%; }
   .hero__scroll-down {
     position: absolute;
-    left: 0;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 17.64rem;
-    min-height: 6.92rem;
+    left: 0;
+    bottom: 0;
+    min-width: 17.643rem;
+    min-height: 6.929rem;
+    background-color: #131313;
+    font-family: 'Yeseva One', cursive;
+    font-size: 0.857rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
-    background-color: #131313; }
+    color: #ffffff; }
     .hero__scroll-down::after {
       content: '';
-      margin-left: 12px;
+      background-image: url("../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
       width: 30px;
       height: 30px;
+      margin-left: 1.143rem;
       border: 2px solid #E3B873;
-      border-radius: 50%;
-      background: url(../img/arrowDown.svg) no-repeat center center; }
-    .hero__scroll-down:hover {
-      color: #E3B873; }
-  .hero .scroll-down {
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    font-size: 0.85rem;
-    line-height: 2px; }
-    .hero .scroll-down:focus {
-      outline: none;
-      box-shadow: none; }
+      border-radius: 50%; }
 
 .instagram {
   display: flex;
   justify-content: center;
-  align-content: center;
-  background-color: #131313; }
+  align-items: center;
+  background-color: #131313;
+  font-family: 'Futura Demi'; }
   .instagram__link {
     display: flex;
     align-items: center;
-    align-self: center;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    line-height: 0.8;
-    color: #E3B873;
     text-decoration: none;
-    transform: rotate(90deg); }
-    .instagram__link:hover {
-      text-decoration: underline; }
+    color: #E3B873;
+    transform: rotate(90deg);
+    line-height: 0.8; }
     .instagram__link::after {
       content: '';
-      margin-left: 8px;
       width: 50px;
       height: 1px;
+      margin-left: 1rem;
       background-color: #E3B873; }
 
 .title {
-  font-family: 'Yeseva One Regular', serif;
-  font-weight: 400;
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
   font-size: 2.857rem;
-  line-height: 132%;
-  font-weight: 400;
-  text-transform: uppercase; }
+  line-height: 3.786rem; }
   .title--primary {
     color: #E3B873; }
 
 .types__section-title {
-  margin-bottom: 2.1rem; }
+  margin-bottom: 1.3rem; }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
+.types__card {
+  padding-top: 1rem; }
 
-.col {
-  flex-basis: 32%; }
-
-.card {
+.types__pricetag {
+  padding: 1.214rem 0;
   text-align: center; }
-  .card__text {
-    position: relative;
-    max-width: 23.57rem;
-    margin: -9.45rem auto 0 auto;
-    padding: 1.79rem 2.14rem;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-  .card__title {
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    font-size: 1.29rem;
-    margin-top: 0;
-    margin-bottom: 0.7rem; }
-  .card__list {
-    margin: 0 0 2.4rem 0;
-    padding: 0 0 0 1rem;
-    font-size: 1.07rem;
-    line-height: 1.79rem;
-    color: #959595; }
-  .card__pricetag {
-    position: absolute;
-    left: 0;
-    bottom: -1.79rem;
-    padding: 1.214rem 2.9rem;
-    font-size: 1.29rem;
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #E3B873;
-    cursor: pointer;
-    transition: 0.5s;
-    transition: color 0.8s; }
-    .card__pricetag--second {
-      padding: 1.214rem 2.6rem; }
-    .card__pricetag--last {
-      padding: 1.214rem 2.5rem; }
-    .card__pricetag:hover {
-      background-color: #FFE7C1;
-      color: #131313; }
 
-.design {
-  padding: 70px 0 70px 0; }
-  .design__section-title {
-    margin-bottom: 1.4rem; }
-  .design__section-description {
-    max-width: 52.92rem;
-    margin: 0 auto 3.3rem auto;
-    text-align: center; }
+.design__section-title {
+  margin-bottom: 1.3rem; }
 
-.design-card {
-  text-align: center; }
-  .design-card__text {
-    position: relative;
-    max-width: 23.57rem;
-    margin: -9.45rem auto 0 auto;
-    padding: 1.79rem 2.14rem;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-  .design-card__title {
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    font-size: 1.29rem;
-    margin-top: 0;
-    margin-bottom: 0.7rem; }
-  .design-card__list {
-    margin: 0 0 2.4rem 0;
-    padding: 0 0 0 1rem;
-    font-size: 1.07rem;
-    line-height: 1.79rem;
-    color: #959595; }
-  .design-card__pricetag {
-    position: absolute;
-    left: 0;
-    bottom: -1.79rem;
-    padding: 1.214rem 5.6rem 1.214rem 2.5rem;
-    font-size: 1.29rem;
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #E3B873;
-    cursor: pointer;
-    transition: 0.5s;
-    transition: color 0.8s; }
-    .design-card__pricetag--second {
-      padding: 1.214rem 5.4rem 1.214rem 2.5rem; }
-    .design-card__pricetag--last {
-      padding: 1.214rem 5.3rem 1.214rem 2.5rem; }
-    .design-card__pricetag:hover {
-      background-color: #FFE7C1;
-      color: #131313; }
+.design__card {
+  padding-top: 1rem; }
+
+.design__info {
+  margin: 0 auto 2.4rem auto;
+  max-width: 52.928rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 1.928rem; }
+
+.design__pricetag {
+  padding: 1.214rem 0 1.214rem 2.14rem;
+  text-align: left; }
 
 .modal {
   opacity: 0;
   visibility: hidden;
   position: fixed;
+  z-index: 199;
   left: 0;
-  right: 0;
   top: 0;
   bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(19, 19, 19, 0.6);
-  z-index: 199; }
+  align-items: center; }
   .modal--visible {
     opacity: 1;
     visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
-    padding: 2.357rem 3.5rem 1.928rem;
-    color: #fff;
-    background: #131313 url(../img/bg-lines.png) no-repeat center;
-    z-index: 999; }
+    width: 100%;
+    background-color: #131313;
+    background-image: url("../img/bg-lines.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2.357rem 3.65rem 1.928rem;
+    color: #ffffff; }
   .modal__close {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     width: 28px;
     height: 28px;
-    margin: 12px;
-    background: transparent url(../img/x-circle.svg) no-repeat center;
+    background-color: transparent;
+    background-image: url("../img/btn-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
+    margin: 12px;
     cursor: pointer; }
-    .modal__close:focus {
-      outline: none; }
-    .modal__close:hover {
-      background: transparent url(../img/x-circle2.svg) no-repeat center; }
   .modal__title {
-    margin: 0 0 2.428rem 0;
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    font-size: 1.356rem;
-    text-align: center; }
+    max-width: 25.86rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.82rem;
+    margin: 0 auto;
+    margin-bottom: 2.1rem; }
   .modal__form {
     display: flex;
-    flex-direction: column;
-    align-self: flex-start; }
+    flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.482rem; }
-    .modal__input:focus {
-      outline: none; }
+    margin-bottom: 3.1rem; }
     .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+      margin-bottom: 0.05rem; }
   .modal__policy {
-    margin-bottom: 2.7rem; }
+    margin-bottom: 2.9rem; }
   .modal__button {
-    padding: 19px 34px;
-    align-self: flex-end; }
+    align-self: flex-end;
+    min-width: 15.214rem; }
+
+@media screen and (max-width: 1320px) {
+  .menu {
+    justify-content: space-between; }
+    .menu__logo {
+      margin-left: 2rem; }
+    .menu__contacts {
+      margin-left: auto;
+      margin-right: 2rem; }
+  .hero__instagram {
+    max-width: 40px; } }
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
-  .nav__item {
-    margin-right: 1rem; }
-  .card__text {
-    margin: -6.45rem auto 0 auto; }
-  .design-card__text {
-    margin: -6.45rem auto 0 auto; } }
+  .container {
+    padding: 0 1.5rem; }
+  .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
+    margin-left: 2rem; }
+  .hero__scroll-down {
+    min-height: 5rem; } }
 
 @media screen and (max-width: 992px) {
-  .nav {
-    display: none; }
-  .hero__instagram {
-    display: none; }
+  .menu__logo {
+    margin-left: 1.5rem; }
+  .menu__contacts {
+    margin-right: 1.5rem; }
+  .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
+    margin-left: 1.643rem; }
+  .button {
+    font-size: 1.083rem; }
+    .button--primary {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      box-shadow: none; }
+    .button--outline {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem; }
   .hero__content {
-    margin-left: 0; }
-  .card__text {
-    max-width: 18.87rem; }
-  .design-card__text {
-    max-width: 18.87rem; } }
-
-@media screen and (max-width: 767px) {
-  .row {
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly; }
-    .row__design {
-      align-items: flex-start; }
-  .col {
-    flex-basis: 40%; }
-  .card__text {
-    margin: -4.45rem auto 0 auto;
-    max-width: 18rem;
-    min-width: 211px; }
-  .types__card {
-    margin-bottom: 5rem; }
-  .design-card {
-    margin-bottom: 5rem; }
-  .design-card__text {
-    max-width: 23.57rem;
-    margin-left: 0; }
-  .design__section-description {
-    font-size: 1.5rem; }
-  .design-card__pricetag {
-    padding: 1.214rem 4.4rem 1.214rem 2.5rem; }
-    .design-card__pricetag--second {
-      padding: 1.214rem 4.4rem 1.214rem 2.5rem; }
-    .design-card__pricetag--last {
-      padding: 1.214rem 4.3rem 1.214rem 2.5rem; } }
-
-@media screen and (max-height: 620px) {
-  .hero__scroll-down {
-    display: none; } }
-
-@media screen and (max-width: 576px) {
-  .row {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center; }
-  .card__text {
-    margin: -4.45rem auto 0 0;
-    max-width: 23.57rem; }
-  .contacts__button {
-    display: none; }
-  .contacts__phone {
-    margin-right: 0;
-    color: #fff;
-    text-decoration: none; }
-  .title {
-    margin-bottom: 1.14rem;
-    font-size: 1.64rem; }
-  .hero__content {
-    max-width: 22.86rem;
-    margin: 0 auto; }
+    max-width: 28.25rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
   .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    margin: 1.1rem 0 2.666rem 0;
+    font-size: 1.5rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; }
+    max-width: 31.25rem;
+    width: 100%;
+    margin-bottom: 2.15rem; }
   .hero__scroll-down {
     display: none; }
-  .button {
-    padding: 19px 69px; }
-  .design {
-    background-color: #131313; }
-    .design__section-title {
-      color: #fff; }
-    .design__section-description {
-      color: #fff;
-      font-size: 1.2rem; } }
+  .instagram {
+    display: none; }
+  .title {
+    font-size: 1.917rem;
+    line-height: 2.583rem; } }
+
+@media screen and (max-width: 900px) {
+  .contacts__phone {
+    margin-right: 0;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; } }
+
+@media screen and (max-width: 760px) {
+  .section-title__heading {
+    font-size: 1.833rem; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__section-title {
+    margin-bottom: 2.35rem; }
+  .types__card {
+    margin-bottom: 5.6rem; }
+  .types__pricetag {
+    padding: 0.917rem 0; }
+  .card__text {
+    margin-left: 0;
+    margin-top: -12rem;
+    padding: 1.79rem 2.5rem;
+    max-width: 22.5rem; }
+  .card__title {
+    padding: 0 0 0 0.15rem;
+    font-size: 1.25rem; }
+  .card__list {
+    margin-bottom: 1.55rem;
+    padding: 0 0 0 1.1rem;
+    line-height: 1.9rem;
+    letter-spacing: 0; }
+  .card__item {
+    font-size: 1.083rem; }
+  .card__pricetag {
+    width: 15.833rem;
+    font-size: 1.25rem; }
+  .design__card {
+    margin-bottom: 5.6rem; }
+  .design__info {
+    margin: 1.5rem auto 2rem auto;
+    max-width: 25.5rem;
+    font-size: 1.25rem;
+    line-height: 1.667rem; }
+  .design__pricetag {
+    padding: 0.917rem 0;
+    text-align: center; } }
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none; }
+  .contacts__phone {
+    color: #ffffff; } }

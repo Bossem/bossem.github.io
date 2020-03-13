@@ -1,120 +1,129 @@
+@media screen and ( max-width: 1320px )
+  .menu
+    justify-content: space-between
+    &__logo
+      margin-left: 2rem
+    &__contacts
+      margin-left: auto
+      margin-right: 2rem
+  .hero
+    &__instagram
+      max-width: 40px
 
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
+  .container
+    padding: 0 1.5rem
   .nav
     &__item
-      margin-right: 1rem
-  .card
-    &__text
-      margin: -6.45rem auto 0 auto
-  .design-card
-    &__text
-      margin: -6.45rem auto 0 auto
-
-@media screen and (max-width: 992px)
-  .nav
-    display: none
-  .hero
-    &__instagram
-      display: none
-    &__content
-      margin-left: 0
-
-  .card
-    &__text
-      max-width: 18.87rem
-
-  .design-card
-    &__text
-      max-width: 18.87rem
-@media screen and (max-width: 767px)
-  .row
-    flex-wrap: wrap
-    flex-direction: row
-    align-items: center
-    justify-content: space-evenly
-    &__design
-      align-items: flex-start
-  .col
-    flex-basis: 40%
-
-  .card
-    &__text
-      margin: -4.45rem auto 0 auto
-      max-width: 18rem //добавил новый трюк
-      min-width: 211px
-  .types
-    &__card
-      margin-bottom: 5rem
-
-  .design
-    &-card
-      margin-bottom: 5rem
-
-  .design-card
-    &__text
-      max-width: 23.57rem
-      margin-left: 0
-  .design
-    &__section-description
-      font-size: 1.5rem
-
-  .design-card
-    &__pricetag
-      padding: 1.214rem 4.4rem 1.214rem 2.5rem
-      &--second
-        padding: 1.214rem 4.4rem 1.214rem 2.5rem
-      &--last
-        padding: 1.214rem 4.3rem 1.214rem 2.5rem
-
-@media screen and (max-height: 620px)
+      &:nth-of-type(n+2):nth-of-type(-n+6)
+        margin-left: 2rem
   .hero
     &__scroll-down
-      display: none
+      min-height: 5rem
 
-@media screen and (max-width: 576px)
-  .row
-    flex-wrap: wrap
-    flex-direction: column
-    align-items: center
-
-  .card
-    &__text
-      margin: -4.45rem auto 0 0
-      max-width: 23.57rem //добавил новый трюк
-
-  .contacts
-    &__button
-      display: none
-    &__phone
-      margin-right: 0
-      color: $light
-      text-decoration: none
-  .title
-    margin-bottom: 1.14rem
-    font-size: 1.64rem
+@media screen and ( max-width: 992px )
+  .menu
+    &__logo
+      margin-left: 1.5rem
+    &__contacts
+      margin-right: 1.5rem
+  .nav
+    &__item
+      &:nth-of-type(n+2):nth-of-type(-n+6)
+        margin-left: 1.643rem
+  .button
+    font-size: 1.083rem
+    &--primary
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem      
+      box-shadow: none
+    &--outline
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem
   .hero
     &__content
-      max-width: 22.86rem
-      margin: 0 auto
+      max-width: 28.25rem
+      margin-left: 1.5rem
+      margin-right: 1.5rem
     &__text
-      font-size: 1.29rem
-      margin-bottom: 2.28rem
+      margin: 1.1rem 0 2.666rem 0
+      font-size: 1.5rem
     &__button
       display: block
-      min-width: 22.86rem
-      margin-bottom: 1.85rem
+      max-width: 31.25rem
+      width: 100%
+      margin-bottom: 2.15rem
     &__scroll-down
       display: none
+  .instagram
+    display: none
+  .title
+    font-size: 1.917rem
+    line-height: 2.583rem
+  .section
+    &-title
+      // display: none
 
-  .button
-    padding: 19px 69px
+@media screen and ( max-width: 900px )
+  .contacts
+    &__phone
+      margin-right: 0
+      text-decoration: none
+    &__button
+      display: none
 
-  .design
-    background-color: $dark
+@media screen and ( max-width: 760px )  
+  .section
+    &-title
+      &__heading
+        font-size: 1.833rem
+  .row
+    flex-direction: column
+    align-items: center
+  .types
     &__section-title
-      color: $light
-    &__section-description
-      color: $light
-      font-size: 1.2rem
+      margin-bottom: 2.35rem
+    &__card
+      margin-bottom: 5.6rem
+    &__pricetag
+      padding: 0.917rem 0
+  .card
+    &__text
+      margin-left: 0
+      margin-top: -12rem
+      padding: 1.79rem 2.5rem
+      max-width: 22.5rem
+    &__title
+      padding: 0 0 0 0.15rem
+      font-size: 1.25rem
+    &__list
+      margin-bottom: 1.55rem
+      padding: 0 0 0 1.1rem
+      line-height: 1.9rem
+      letter-spacing: 0
+    &__item
+      font-size: 1.083rem
+    &__pricetag
+      width: 15.833rem
+      font-size: 1.25rem
+  .design
+    &__card
+      margin-bottom: 5.6rem
+    &__info
+      margin: 1.5rem auto 2rem auto
+      max-width: 25.5rem
+      font-size: 1.25rem
+      line-height: 1.667rem
+    &__pricetag
+      padding: 0.917rem 0
+      text-align: center
+
+
+@media screen and ( max-width: 700px )
+  .nav
+    display: none
+  .contacts
+    &__phone
+      color: #ffffff

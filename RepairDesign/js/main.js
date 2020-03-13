@@ -1,75 +1,93 @@
-$(document).ready(function () {
-
-  var modal = $('.modal'),
-    modalBtn = $('[data-toggle=modal]'),
-    closeBtn = $('.modal__close'),
-    scrollBtn = $('.scroll-top'),
-    modalDialog = $('.modal__dialog');
-
-  modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
-  });
-
-  closeBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
-  });
-
-  // close esc
-  $(this).keydown(function (event) {
-    if (event.which == 27) {
-      modal.removeClass('modal--visible');
-    }
-  });
-
-  //---close click
-  $(this).mouseup(function (event) {
-    if (event.target != modalDialog[0] && modalDialog.has(event.target).length === 0) {
-      modal.removeClass('modal--visible');
-    }
-  })
-
-  //scroll ------
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 500) {
-      scrollBtn.removeClass('scroll-top__button--hidden')
-    } else {
-      scrollBtn.addClass('scroll-top__button--hidden')
-    }
-  });
-
-  scrollBtn.on('click', function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    $('html, body').animate({ scrollTop: 0 }, 1000, "swing");
-  });
-
-});
-/*
-document.addEventListener('DOMContentLoaded', function (event) {
-
+/*document.addEventListener("DOMContentLoaded", function(event) {
   const modal = document.querySelector('.modal');
-  const closeModal = document.querySelector('[data-modal=close]')
-  const modalDialog = document.querySelector('.modal__dialog');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
-
+  
+  // Функция добавляет класс "modal--visible"
   const switchModal = () => {
     modal.classList.toggle('modal--visible');
+  };
+
+  // Функция закрывает модальное окно клавишей "Escape"
+  const escapeBtn = (event) => {
+    if (modal.classList.contains('modal--visible')) {
+      if (event.which == 27) {
+        switchModal();
+      };
+    };
+  };
+
+  // Функция закрывает модальное окно при клике вне модального окна
+  const clickFreeSpace = (e) => {
+    if (e.target.classList.contains('modal')) {
+      switchModal();
+    };
   };
 
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
 
-
   closeBtn.addEventListener('click', switchModal);
+  closeBtn.addEventListener('click', switchModal);
+  document.addEventListener('keydown', escapeBtn);  
+  modal.addEventListener('click', clickFreeSpace);
+}); */
 
+/*$(document).ready(function () {
+  let modal = $('.modal');
+  let modalBtn = $('[data-toggle=modal]');
+  let closeBtn = $('.modal__close');
 
-  document.addEventListener('keydown', event => {
-    if (event.keyCode === 27) {
-      modal.classList.remove('modal--visible');
-    }
+  modalBtn.on('click', function() {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function() {
+    modal.toggleClass('modal--visible');
   });
 
+}); */
+
+$(document).ready(function () {
+  let modal = $('.modal');
+  let modalBtn = $('[data-toggle=modal]');
+  let closeBtn = $('.modal__close');
+  let scrollUpBtn = $('.scrollup');
+
+  modalBtn.click( () => {
+    modal.toggleClass('modal--visible');
+  });
+
+  closeBtn.click( () => {
+    modal.toggleClass('modal--visible');
+  });
+
+  $(document).keydown((event) => {
+    if (modal.hasClass('modal--visible')) {
+      if (event.which == 27) {
+        modal.toggleClass('modal--visible');
+      };
+    };
+  });
+
+  modal.click((e) => {
+    if (modal.is(e.target) && modal.has(e.target).length === 0) {
+      modal.toggleClass('modal--visible');
+    };
+  });
+
+  $(window).scroll( () => {
+    if ($(this).scrollTop() > 150) {
+      scrollUpBtn.addClass('scrollup--visible');
+      scrollUpBtn.fadeIn();
+    } else {
+      scrollUpBtn.fadeOut();
+      scrollUpBtn.removeClass('scrollup--visible');
+    }    
+  });
+
+  scrollUpBtn.click( () => {
+    $('html').animate({scrollTop : 0}, 900);
 });
-*/
+
+});
