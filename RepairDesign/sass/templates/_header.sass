@@ -3,36 +3,43 @@
   left: 0
   top: 0
   width: 100%
-  z-index: 99
+  padding: 24px 0
   background-color: $dark
-  padding: 1.714rem 0
+  z-index: 99
+
 .menu
   display: flex
-  justify-content: center
+  justify-content: space-between
   align-items: center
-  &__nav
-    margin-left: auto
-  &__contacts
-    margin-left: 9.143rem
+
 .logo
-  color: $primary
+  letter-spacing: 0
   text-transform: uppercase
-  font-weight: 500
-  letter-spacing: 0.033rem
-.nav
-  &__item    
-    color: $light
+  &__link
+    +font-FuturaDemi
+    color: $primary
     text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.nav
+  &__item
+    margin-right: 2.3rem
     text-transform: uppercase
-    transition: color 0.2s
+    text-decoration: none
+    letter-spacing: 0
+    color: $light
+    transition: color 0.3s
+    &:last-child
+      margin-right: 0
     &:hover
       color: $primary
-    &:nth-of-type(n+2):nth-of-type(-n+6)
-      margin-left: 2.643rem
+
 .phone
   color: $primary
+  &:hover
+    text-decoration: none
+
 .contacts
   &__phone
-    margin-right: 3.143rem
-  &__button
-    padding: 0.786rem 1.571rem 0.786rem 1.5rem
+    margin-right: 42px
