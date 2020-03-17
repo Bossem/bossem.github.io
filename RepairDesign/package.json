@@ -1,7 +1,7 @@
 {
-    "name": "glo_academy",
+    "name": "bossem",
     "version": "1.0.0",
-    "description": "glo_academy",
+    "description": "RepairDesign",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
         "type": "git",
         "url": "git+http://bossem.github.io/.git"
     },
-    "author": "AlexKhischenko",
+    "author": "bossem",
     "license": "ISC",
     "bugs": {
         "url": "https://bossem.github.io//issues"

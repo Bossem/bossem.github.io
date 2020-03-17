@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <!-- <link rel="stylesheet" href="./css/animate.css"> -->
   <link rel="stylesheet" href="./css/style.css">
   <title>Repair Design</title>
 </head>
@@ -13,7 +14,7 @@
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo">Repair Design Project</div>
+        <div class="logo menu__logo myZoomIn wow fadeInLeft">Repair Design Project</div>
         <nav class="nav menu__nav">
           <a href="#" class="nav__item">Главная</a>
           <a href="#" class="nav__item">Проекты</a>
@@ -41,10 +42,10 @@
       </div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
-          <p class="hero__text">Получите готовый ремонт под ключ в срок с&nbsp;экономией рабочего времени до 45 дней и&nbsp;20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline" data-toggle="modal">Отправить заявку</button>
+          <h1 class="title hero__title myZoomIn wow fadeInRight">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
+          <p class="hero__text myZoomIn wow fadeInRight"  data-wow-delay="0.5s">Получите готовый ремонт под ключ в срок с&nbsp;экономией рабочего времени до 45 дней и&nbsp;20% от стоимости материалов за счет организации работы</p>
+          <button class="button hero__button button--primary myZoomIn wow fadeInRight" data-toggle="modal" data-wow-delay="1s">Рассчитать стоимость</button>
+          <button class="button hero__button button--outline myZoomIn wow fadeInRight" data-toggle="modal" data-wow-delay="1s">Отправить заявку</button>
         </div>
         <!-- /.hero__content -->
       </div>
@@ -54,7 +55,7 @@
     <!-- /.hero -->
 
     <section class="section section--dark projects">
-      <div class="container">
+      <div class="container animateProjects wow fadeInUp" data-wow-duration="1s">
 
         <div class="col-100">
           <div class="section-title">
@@ -201,8 +202,8 @@
     </section>
     <!-- /.section section--dark projects -->
 
-    <section class="section control">
-      <div class="container">
+    <section class="section control wow fadeInUp" data-wow-duration="1.5s">
+      <div class="container animateControl">
         <div class="section-title control__section-title section-title--light">
           <h2 class="section-title__heading">Онлайн контроль</h2>
           <!-- /.section-title__heading -->
@@ -240,7 +241,7 @@
     <!-- /.section control -->
 
     <section class="section types">
-      <div class="container">
+      <div class="container animateTypes">
         <div class="section-title types__section-title">
           <h2 class="section-title__heading">Виды ремонта</h2>
           <!-- /.section-title__heading -->
@@ -252,7 +253,7 @@
         <!-- /.section-title -->
         <div class="row">
           <div class="col-32">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInUp">
               <img src="./img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Косметический ремонт</h3>
@@ -285,7 +286,7 @@
           </div>
           <!-- /.col -->
           <div class="col-32">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInUp" data-wow-delay="0.5s">
               <img src="./img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Капитальный ремонт</h3>
@@ -318,7 +319,7 @@
           </div>
           <!-- /.col -->
           <div class="col-32">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInUp" data-wow-delay="1s">
               <img src="./img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -357,8 +358,8 @@
     </section>
     <!-- /.section types -->
 
-    <section class="section design">
-      <div class="container">        
+    <section class="section design wow fadeInUp" data-wow-duration="1s" data-wow-offset="200">
+      <div class="container animateDesign">        
         <div class="section-title design__section-title">
           <h2 class="section-title__heading">Дизайн проект</h2>
           <!-- /.section-title__heading -->
@@ -481,7 +482,7 @@
     <!-- /.section -->
 
     <section class="section steps">
-      <div class="container">
+      <div class="container animateSteps">
         <div class="row">          
           <div class="col-40">
             <div class="steps-title">
@@ -619,10 +620,67 @@
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.steps -->
-  
+    <!-- /.steps -->  
   </main>
   <!-- /.main -->
+
+  <footer class="footer section--dark">
+    <div class="container">
+      <div class="footer__wrap">
+        <h3 class="footer__title">Остались вопросы?</h3>
+        <form action="#" class="form footer__form">
+          <div class="input-group footer__input-group">
+            <label for="user-name" class="label form__label label--light">Имя</label>
+            <input type="text" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+          </div>
+          <!-- /.input-group footer__input-group -->
+          <div class="input-group footer__input-group">
+            <label for="user-phone" class="label form__label label--light">Телефон</label>
+            <input type="tel" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+          </div>
+          <!-- /.input-group footer__input-group -->
+          <div class="input-group footer__input-group footer__input-group--full-width">
+            <label for="user-question" class="label form__label label--light">Вопрос</label>
+            <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+          </div>
+          <!-- /.input-group footer__input-group -->
+          <div class="policy footer__policy">
+            <input type="checkbox" name="policy-checkbox" id="footer-checkbox" class="policy__checkbox" checked>
+            <label for="footer-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
+          </div>
+          <!-- /.policy -->
+          <button class="button button--primary footer__button">Отправить</button>
+        </form>
+        <!-- /.form footer__form -->
+      </div>
+      <!-- /.footer-wrap -->
+    </div>
+    <!-- /.container -->
+    <div class="footer__menu">
+      <div class="container">
+        <div class="menu">
+          <div class="logo menu__logo myZoomIn wow fadeInLeft">Repair Design Project</div>
+          <nav class="nav menu__nav">
+            <a href="#" class="nav__item">Главная</a>
+            <a href="#" class="nav__item">Проекты</a>
+            <a href="#" class="nav__item">Замер</a>
+            <a href="#" class="nav__item">Команда</a>
+            <a href="#" class="nav__item">Отзывы</a>
+            <a href="#" class="nav__item">Контакты</a>
+          </nav>
+          <div class="contacts menu__contacts">
+            <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+            <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+          </div>
+          <!-- /.contacts -->
+        </div>
+        <!-- /.menu -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.footer__menu -->
+  </footer>
+  <!-- /.section section--dark -->
 
   <div class="modal">
     <div class="modal__dialog">
@@ -656,6 +714,7 @@
   
   <script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <!-- <script src="./js/wow.min.js"></script> -->
   <script src="./js/main.js"></script>
 </body>
 </html>
