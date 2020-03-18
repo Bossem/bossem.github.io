@@ -48,401 +48,401 @@
 
 }); */
 
-$(document).ready(function () {
-  let modal = $('.modal');
-  let modalBtn = $('[data-toggle=modal]');
-  let closeBtn = $('.modal__close');
-  let scrollUpBtn = $('.scrollup');
+$(document).ready(function() {
+    let modal = $('.modal');
+    let modalBtn = $('[data-toggle=modal]');
+    let closeBtn = $('.modal__close');
+    let scrollUpBtn = $('.scrollup');
 
-  //Подключение библиотеки анимации
-  new WOW().init();
+    //Подключение библиотеки анимации
+    new WOW().init();
 
-  modalBtn.click( () => {
-    modal.toggleClass('modal--visible');
-  });
-
-  closeBtn.click( () => {
-    modal.toggleClass('modal--visible');
-  });
-
-  $(document).keydown((event) => {
-    if (modal.hasClass('modal--visible')) {
-      if (event.which == 27) {
+    modalBtn.click(() => {
         modal.toggleClass('modal--visible');
-      };
-    };
-  });
-
-  modal.click((e) => {
-    if (modal.is(e.target) && modal.has(e.target).length === 0) {
-      modal.toggleClass('modal--visible');
-    };
-  });
-
-  $(window).scroll( () => {
-    if ($(this).scrollTop() > 150) {
-      scrollUpBtn.addClass('scrollup--visible');
-      scrollUpBtn.fadeIn();
-    } else {
-      scrollUpBtn.fadeOut();
-      scrollUpBtn.removeClass('scrollup--visible');
-    }    
-  });
-
-  scrollUpBtn.click( () => {
-    $('html').animate({scrollTop : 0}, 900);
-});
-
-// Инициализация слайдера "Завершенные проекты"
-var mySwiper1 = new Swiper ('.swiper1', {
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-// Инициализация слайдеров "6 шагов до цели"
-var mySwiper2 = new Swiper ('.swiper2', {
-  controller: {
-    control: [mySwiper3],
-  },
-    pagination: {
-      el: '.pagination-top',
-      type: 'fraction',
-    },
-  });
-var mySwiper3 = new Swiper ('.swiper3', {
-  controller: {
-    control: [mySwiper2],
-  },
-  pagination: {
-    el: '.pagination-bottom',
-  },  
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-getAllSteps = $('.steps-content__step');
-getAllSwipers = $('.swiper2__item');
-getPrevClick = $('.swiper2-prev');
-getNextClick = $('.swiper2-next');
-
-// Переключение активного разеда по кнопке вперед
-getNextClick.click( () => {
-  if (mySwiper3.activeIndex === 0) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
     });
-    $('.steps-content__step--1').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 1) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    closeBtn.click(() => {
+        modal.toggleClass('modal--visible');
     });
-    $('.steps-content__step--2').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 2) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    $(document).keydown((event) => {
+        if (modal.hasClass('modal--visible')) {
+            if (event.which == 27) {
+                modal.toggleClass('modal--visible');
+            };
+        };
     });
-    $('.steps-content__step--3').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 3) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    modal.click((e) => {
+        if (modal.is(e.target) && modal.has(e.target).length === 0) {
+            modal.toggleClass('modal--visible');
+        };
     });
-    $('.steps-content__step--4').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 4) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    $(window).scroll(() => {
+        if ($(this).scrollTop() > 150) {
+            scrollUpBtn.addClass('scrollup--visible');
+            scrollUpBtn.fadeIn();
+        } else {
+            scrollUpBtn.fadeOut();
+            scrollUpBtn.removeClass('scrollup--visible');
+        }
     });
-    $('.steps-content__step--5').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 5) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    scrollUpBtn.click(() => {
+        $('html').animate({ scrollTop: 0 }, 900);
     });
-    $('.steps-content__step--6').addClass('active');
-  }
-});
 
-// Переключение активного разеда по кнопке назад
-getPrevClick.click( () => {
-  if (mySwiper3.activeIndex === 0) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+    // Инициализация слайдера "Завершенные проекты"
+    var mySwiper1 = new Swiper('.swiper1', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
-    $('.steps-content__step--1').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 1) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    // Инициализация слайдеров "6 шагов до цели"
+    var mySwiper2 = new Swiper('.swiper2', {
+        controller: {
+            control: [mySwiper3],
+        },
+        pagination: {
+            el: '.pagination-top',
+            type: 'fraction',
+        },
     });
-    $('.steps-content__step--2').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 2) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+    var mySwiper3 = new Swiper('.swiper3', {
+        controller: {
+            control: [mySwiper2],
+        },
+        pagination: {
+            el: '.pagination-bottom',
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
-    $('.steps-content__step--3').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 3) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    getAllSteps = $('.steps-content__step');
+    getAllSwipers = $('.swiper2__item');
+    getPrevClick = $('.swiper2-prev');
+    getNextClick = $('.swiper2-next');
+
+    // Переключение активного разеда по кнопке вперед
+    getNextClick.click(() => {
+        if (mySwiper3.activeIndex === 0) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--1').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 1) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--2').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 2) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--3').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 3) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--4').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 4) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--5').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 5) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--6').addClass('active');
+        }
     });
-    $('.steps-content__step--4').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 4) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    // Переключение активного разеда по кнопке назад
+    getPrevClick.click(() => {
+        if (mySwiper3.activeIndex === 0) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--1').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 1) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--2').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 2) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--3').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 3) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--4').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 4) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--5').addClass('active');
+        }
+        if (mySwiper3.activeIndex === 5) {
+            getAllSteps.each(function(indes, element) {
+                $(element).removeClass('active');
+            });
+            $('.steps-content__step--6').addClass('active');
+        }
     });
-    $('.steps-content__step--5').addClass('active');
-  }
-  if (mySwiper3.activeIndex === 5) {
-    getAllSteps.each(function (indes, element) {
-      $(element).removeClass('active');    
+
+    // Переключение слайдеров нажатием на раздел
+    $('.steps-content__step--1').click(() => {
+        getAllSteps.each(function(indes, element) {
+            $(element).removeClass('active');
+        });
+        $('.steps-content__step--1').addClass('active');
+        mySwiper3.slideTo(0, 700);
     });
-    $('.steps-content__step--6').addClass('active');
-  }
-});
 
-// Переключение слайдеров нажатием на раздел
-$('.steps-content__step--1').click( () => {
-  getAllSteps.each(function (indes, element) {
-    $(element).removeClass('active');    
-  });
-  $('.steps-content__step--1').addClass('active');
-  mySwiper3.slideTo(0, 700); 
-});
-
-$('.steps-content__step--2').click( () => {
-  getAllSteps.each(function (indes, element) {
-    $(element).removeClass('active');    
-  });
-  $('.steps-content__step--2').addClass('active');
-  mySwiper3.slideTo(1, 700); 
-});
-$('.steps-content__step--3').click( () => {
-  getAllSteps.each(function (indes, element) {
-    $(element).removeClass('active');    
-  });
-  $('.steps-content__step--3').addClass('active');
-  mySwiper3.slideTo(2, 700); 
-});
-$('.steps-content__step--4').click( () => {
-  getAllSteps.each(function (indes, element) {
-    $(element).removeClass('active');    
-  });
-  $('.steps-content__step--4').addClass('active');
-  mySwiper3.slideTo(3, 700); 
-});
-$('.steps-content__step--5').click( () => {
-  getAllSteps.each(function (indes, element) {
-    $(element).removeClass('active');    
-  });
-  $('.steps-content__step--5').addClass('active');
-  mySwiper3.slideTo(4, 700); 
-});
-$('.steps-content__step--6').click( () => {
-  getAllSteps.each(function (indes, element) {
-    $(element).removeClass('active');    
-  });
-  $('.steps-content__step--6').addClass('active');
-  mySwiper3.slideTo(5, 700); 
-});
+    $('.steps-content__step--2').click(() => {
+        getAllSteps.each(function(indes, element) {
+            $(element).removeClass('active');
+        });
+        $('.steps-content__step--2').addClass('active');
+        mySwiper3.slideTo(1, 700);
+    });
+    $('.steps-content__step--3').click(() => {
+        getAllSteps.each(function(indes, element) {
+            $(element).removeClass('active');
+        });
+        $('.steps-content__step--3').addClass('active');
+        mySwiper3.slideTo(2, 700);
+    });
+    $('.steps-content__step--4').click(() => {
+        getAllSteps.each(function(indes, element) {
+            $(element).removeClass('active');
+        });
+        $('.steps-content__step--4').addClass('active');
+        mySwiper3.slideTo(3, 700);
+    });
+    $('.steps-content__step--5').click(() => {
+        getAllSteps.each(function(indes, element) {
+            $(element).removeClass('active');
+        });
+        $('.steps-content__step--5').addClass('active');
+        mySwiper3.slideTo(4, 700);
+    });
+    $('.steps-content__step--6').click(() => {
+        getAllSteps.each(function(indes, element) {
+            $(element).removeClass('active');
+        });
+        $('.steps-content__step--6').addClass('active');
+        mySwiper3.slideTo(5, 700);
+    });
 
 
-var next = $('.swiper-button-next');
-var prev = $('.swiper-button-prev');
-var bullets = $('.swiper-pagination');
-next.css('left', prev.width() + 20 + bullets.width() + 20);
-bullets.css('left', prev.width() + 20);
+    var next = $('.swiper-button-next');
+    var prev = $('.swiper-button-prev');
+    var bullets = $('.swiper-pagination');
+    next.css('left', prev.width() + 20 + bullets.width() + 20);
+    bullets.css('left', prev.width() + 20);
 
 
-var nextSteps = $('.swiper2-next');
-var prevSteps = $('.swiper2-prev');
-var bulletsSteps = $('.pagination-bottom');
-nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width() + 20);
-bulletsSteps.css('left', prevSteps.width() + 20);
+    var nextSteps = $('.swiper2-next');
+    var prevSteps = $('.swiper2-prev');
+    var bulletsSteps = $('.pagination-bottom');
+    nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width() + 20);
+    bulletsSteps.css('left', prevSteps.width() + 20);
 
-// Валидация форм
-// Control Form
-$('.control__form').validate({
-  errorElement: "div",
-  errorClass: "invalid",
-  rules: {
-    // simple rule, converted to {required:true}
-    controlUserName: {
-      required: true,
-      minlength: 2,
-    },
-    controlUserPhone: "required",
-  },
-  messages: {
-    controlUserName: {
-      required: "Заполните поле",
-      minlength: "Имя должно содержать не менее двух символов",
-    },
-    controlUserPhone: "Заполните поле",
-  }
-});
+    // Валидация форм
+    // Control Form
+    $('.control__form').validate({
+        errorElement: "div",
+        errorClass: "invalid",
+        rules: {
+            // simple rule, converted to {required:true}
+            controlUserName: {
+                required: true,
+                minlength: 2,
+            },
+            controlUserPhone: "required",
+        },
+        messages: {
+            controlUserName: {
+                required: "Заполните поле",
+                minlength: "Имя должно содержать не менее двух символов",
+            },
+            controlUserPhone: "Заполните поле",
+        }
+    });
 
-// Modal Form
-$('.modal__form').validate({
-  errorElement: "div",
-  errorClass: "invalid",
-  rules: {
-    // simple rule, converted to {required:true}
-    modalUserName: {
-      required: true,
-      minlength: 2,
-    },
-    modalUserPhone: "required",
-    // compound rule
-    modalUserEmail: {
-      required: true,
-      email: true
-    }
-  },
-  messages: {
-    modalUserName: {
-      required: "Заполните поле",
-      minlength: "Имя должно содержать не менее двух символов",
-    },
-    modalUserPhone: "Заполните поле",
-    modalUserEmail: {
-      required: "Заполните поле",
-      email: "Введите корректный email"
-    },
-  }
-});
+    // Modal Form
+    $('.modal__form').validate({
+        errorElement: "div",
+        errorClass: "invalid",
+        rules: {
+            // simple rule, converted to {required:true}
+            modalUserName: {
+                required: true,
+                minlength: 2,
+            },
+            modalUserPhone: "required",
+            // compound rule
+            modalUserEmail: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            modalUserName: {
+                required: "Заполните поле",
+                minlength: "Имя должно содержать не менее двух символов",
+            },
+            modalUserPhone: "Заполните поле",
+            modalUserEmail: {
+                required: "Заполните поле",
+                email: "Введите корректный email"
+            },
+        }
+    });
 
-// Footer Form
-$('.footer__form').validate({
-  errorElement: "div",
-  errorClass: "invalid",
-  rules: {
-      // simple rule, converted to {required:true}
-    footerUserName: {
-      required: true,
-      minlength: 2,
-    },
-    footerUserPhone: "required",
-      // compound rule
-      footerUserText: {
-      required: true,
-    }
-  },
-  messages: {
-    footerUserName: {
-      required: "Заполните поле",
-      minlength: "Имя должно содержать не менее двух символов",
-    },
-    footerUserPhone: "Заполните поле",
-    footerUserText: {
-      required: "Заполните поле",
-    },
-  }
-});
+    // Footer Form
+    $('.footer__form').validate({
+        errorElement: "div",
+        errorClass: "invalid",
+        rules: {
+            // simple rule, converted to {required:true}
+            footerUserName: {
+                required: true,
+                minlength: 2,
+            },
+            footerUserPhone: "required",
+            // compound rule
+            footerUserText: {
+                required: true,
+            }
+        },
+        messages: {
+            footerUserName: {
+                required: "Заполните поле",
+                minlength: "Имя должно содержать не менее двух символов",
+            },
+            footerUserPhone: "Заполните поле",
+            footerUserText: {
+                required: "Заполните поле",
+            },
+        }
+    });
 
-// Маска для номера телефона
-$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+    // Маска для номера телефона
+    $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7 (___) ___-__-__" });
 
 
-// Инициализация карты Yandex Map API
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-          center: [55.786774, 49.142715],
-          zoom: 17
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
+    // Инициализация карты Yandex Map API
+    ymaps.ready(function() {
+        var myMap = new ymaps.Map('map', {
+                center: [55.786774, 49.142715],
+                zoom: 17
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
 
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
 
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Александр Хищенко',
-          balloonContent: 'GLO Academy'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: '../img/footer/map-icon.jpg',
-          // Размеры метки.
-          iconImageSize: [32, 32],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      });
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Бойченко Роман ',
+                balloonContent: 'GLO Academy'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: '../img/footer/map-icon.jpg',
+                // Размеры метки.
+                iconImageSize: [32, 32],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            });
 
-  myMap.geoObjects
-      .add(myPlacemark);
-});
+        myMap.geoObjects
+            .add(myPlacemark);
+    });
 
-// // Запуск анимации при скролле
-// var documentEl = $(document);
+    // // Запуск анимации при скролле
+    // var documentEl = $(document);
 
-// // Анимация секции "Завершенные проекты"
-// var projects = $('.projects');
-// var animateProjects = $('.animateProjects');
-// var startAnimateProjects = projects.offset().top/3;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateProjects) {
-//     animateProjects.addClass('myFadeInUp');
-//   }
-// });
+    // // Анимация секции "Завершенные проекты"
+    // var projects = $('.projects');
+    // var animateProjects = $('.animateProjects');
+    // var startAnimateProjects = projects.offset().top/3;
+    // documentEl.scroll( () => {
+    //   if (documentEl.scrollTop() > startAnimateProjects) {
+    //     animateProjects.addClass('myFadeInUp');
+    //   }
+    // });
 
-// // Анимация секции "Онлайн контроль"
-// var control = $('.control');
-// var animateControl = $('.animateControl');
-// var startAnimateControl = control.offset().top/3;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateControl) {
-//     animateControl.addClass('myFadeInUp');
-//   }
-// });
+    // // Анимация секции "Онлайн контроль"
+    // var control = $('.control');
+    // var animateControl = $('.animateControl');
+    // var startAnimateControl = control.offset().top/3;
+    // documentEl.scroll( () => {
+    //   if (documentEl.scrollTop() > startAnimateControl) {
+    //     animateControl.addClass('myFadeInUp');
+    //   }
+    // });
 
-// // Анимация секции "Виды ремонта"
-// var types = $('.types');
-// var animateTypes = $('.animateTypes');
-// var startAnimateTypes = types.offset().top;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateTypes) {
-//     animateTypes.addClass('myFadeInUp');
-//   }
-// });
+    // // Анимация секции "Виды ремонта"
+    // var types = $('.types');
+    // var animateTypes = $('.animateTypes');
+    // var startAnimateTypes = types.offset().top;
+    // documentEl.scroll( () => {
+    //   if (documentEl.scrollTop() > startAnimateTypes) {
+    //     animateTypes.addClass('myFadeInUp');
+    //   }
+    // });
 
-// // Анимация секции "Дизайн проект"
-// var design = $('.design');
-// var animateDesign = $('.animateDesign');
-// var startAnimateDesign = design.offset().top;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateDesign) {
-//     animateDesign.addClass('myFadeInUp');
-//   }
-// });
+    // // Анимация секции "Дизайн проект"
+    // var design = $('.design');
+    // var animateDesign = $('.animateDesign');
+    // var startAnimateDesign = design.offset().top;
+    // documentEl.scroll( () => {
+    //   if (documentEl.scrollTop() > startAnimateDesign) {
+    //     animateDesign.addClass('myFadeInUp');
+    //   }
+    // });
 
-// // Анимация секции "6 шагов до цели"
-// var steps = $('.steps');
-// var animateSteps = $('.animateSteps');
-// var startAnimateSteps = steps.offset().top;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateSteps) {
-//     animateSteps.addClass('myFadeInUp');
-//   }
-// });
+    // // Анимация секции "6 шагов до цели"
+    // var steps = $('.steps');
+    // var animateSteps = $('.animateSteps');
+    // var startAnimateSteps = steps.offset().top;
+    // documentEl.scroll( () => {
+    //   if (documentEl.scrollTop() > startAnimateSteps) {
+    //     animateSteps.addClass('myFadeInUp');
+    //   }
+    // });
 
 });
