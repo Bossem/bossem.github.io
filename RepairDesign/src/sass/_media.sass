@@ -13,6 +13,7 @@
     padding-left: 1rem
     padding-right: 1rem
   .steps
+    padding-bottom: 400px
     &-title
       padding-left: 1rem
 
@@ -33,6 +34,13 @@
   .steps
     &-title
       padding-left: 0
+  .team
+    &__row
+      justify-content: space-around
+    &__col
+      &-32
+        &--second
+          margin: 0
 
 @media screen and ( max-width: 992px )
   .menu
@@ -46,9 +54,7 @@
         margin-left: 1.643rem
   .button
     font-size: 1.083rem
-    &--primary
-      padding-top: 1.5rem
-      padding-bottom: 1.5rem      
+    &--primary     
       box-shadow: none
     &--outline
       padding-top: 1.5rem
@@ -66,6 +72,8 @@
       max-width: 31.25rem
       width: 100%
       margin-bottom: 2.15rem
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem  
     &__scroll-down
       display: none
   .instagram
@@ -100,8 +108,33 @@
   .col-60
     width: 100%
     order: -1
-  .steps
+  .types
+    &__card
+      margin-bottom: 5.6rem
+  .design
+    &__card
+      margin-bottom: 5.6rem
+  .steps    
     display: none
+  .team
+    margin-top: 60px
+    padding-top: 2rem
+    background-color: $dark
+    &__text
+      color: $light
+    &-card
+      max-width: 304px
+      &__image
+        &-1
+          display: none
+        &-2
+          display: block
+    &__col
+      &-32
+        margin-left: 1.5rem
+  .footer
+    &__wrap
+      margin-top: auto
 
 @media screen and ( max-width: 900px )
   .contacts
@@ -115,6 +148,7 @@
   .section
     &-title
       &__heading
+        margin-top: 0
         font-size: 1.833rem
       &__text
         margin-top: 2.1rem
@@ -137,11 +171,12 @@
   .row
     flex-direction: column
     align-items: center
+  .control
+    &__heading
+      margin-top: 2rem
   .types
     &__section-title
       margin-bottom: 2.35rem
-    &__card
-      margin-bottom: 5.6rem
     &__pricetag
       padding: 0.917rem 0
   .card
@@ -164,16 +199,31 @@
       width: 15.833rem
       font-size: 1.25rem
   .design
-    &__card
-      margin-bottom: 5.6rem
+    margin-bottom: 0
+    padding-top: 3rem
+    background-color: $dark
+    &__heading
+      &--light
+        color: $light
     &__info
       margin: 1.5rem auto 2rem auto
       max-width: 25.5rem
       font-size: 1.25rem
       line-height: 1.667rem
+      color: $light
     &__pricetag
       padding: 0.917rem 0
       text-align: center
+  .team
+    margin-top: 0
+    &-card
+      &__icon
+        left: -30px
+        top: -30px
+        width: 60px
+        height: 60px
+        &-image
+          width: 60%
 
 @media screen and ( max-width: 700px )
   .nav
@@ -257,3 +307,96 @@
       height: 5.083rem
   .types
     padding-top: 5.3rem
+  .design
+    margin-bottom: 0
+    padding-top: 3rem
+    background-color: $dark
+  .team
+    margin-top: 0
+    padding-top: 2.5rem
+    &__heading
+      margin-top: 0
+      margin-bottom: 1.1rem
+    &__image
+      margin-top: 0.5rem
+    &__info
+      margin-top: 1.7rem
+      margin-bottom: 6.8rem
+      font-size: 1.25rem
+      line-height: 1.667rem
+    &__col
+      &-32
+        margin-left: 2rem
+    &__text
+      display: none
+    &-card
+      &__container
+        padding-top: 1.8rem
+      &__name
+        margin-bottom: 0.5rem
+        font-size: 1.5rem
+      &__position
+        font-size: 1.5rem
+      &__experience
+        margin-top: 2rem
+        font-size: 1.083rem
+  .footer
+    margin-bottom: 0 !important
+    padding-top: 0
+    background-image: none
+    background-color: $dark
+    &__title
+      margin-bottom: 4.5rem
+      font-size: 1.667rem
+    &__wrap
+      margin-bottom: 3.9rem
+      padding: 0
+      background-image: none
+    &__label
+      margin-bottom: -3px
+      font-size: 1.25rem
+    &__input
+      font-size: 1.5rem
+      &-group
+        flex-basis: 100%
+        margin-bottom: 5.2rem
+    &__button
+      width: 100%
+      font-size: 1.25rem
+    &__policy
+    margin-bottom: 3.3rem
+    &__map
+      order: -1
+      margin-bottom: 0
+      width: 100%
+      max-height: 255px
+      min-height: 255px
+    &__menu
+      display: none
+  .policy
+    &__label
+      &--center
+        justify-content: flex-start
+        margin-top: -4.5rem
+        font-size: 1.333rem
+  .location
+    display: flex
+    flex-direction: column
+  .address
+    &__title
+      margin-top: 3.3rem
+      max-width: 27rem
+      font-size: 1.5rem
+      letter-spacing: 0
+      line-height: 2.1rem
+    &__icons
+      max-width: 8.2rem
+    &__icon
+      width: 3.25rem
+      height: 3.25rem
+      &-image
+        width: 50%
+  .scrollup
+    display: none
+
+      
