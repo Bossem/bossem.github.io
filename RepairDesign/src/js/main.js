@@ -108,9 +108,10 @@ $(document).ready(function() {
 
     // Инициализация слайдеров "6 шагов до цели"
     var mySwiper2 = new Swiper('.swiper2', {
-        controller: {
-            control: [mySwiper3],
+        fadeEffect: {
+            crossFade: true
         },
+        effect: 'fade',
         pagination: {
             el: '.pagination-top',
             type: 'fraction',
@@ -120,6 +121,10 @@ $(document).ready(function() {
         controller: {
             control: [mySwiper2],
         },
+        fadeEffect: {
+            crossFade: true
+        },
+        effect: 'fade',
         pagination: {
             el: '.pagination-bottom',
         },
@@ -373,7 +378,7 @@ $(document).ready(function() {
             ),
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Бойченко Роман ',
+                hintContent: 'Бойченко Роман',
                 balloonContent: 'GLO Academy'
             }, {
                 // Опции.

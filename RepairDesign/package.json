@@ -1,29 +1,29 @@
 {
-    "name": "bossem",
-    "version": "1.0.0",
-    "description": "RepairDesign",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+http://bossem.github.io/.git"
-    },
-    "author": "bossem",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://bossem.github.io//issues"
-    },
-    "homepage": "https://bossem.github.io/#readme",
-    "devDependencies": {
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-clean-css": "^4.2.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-sass": "^4.0.2"
-    },
-    "dependencies": {
-        "browser-sync": "^2.26.7"
-    }
+  "name": "bossem",
+  "version": "1.0.0",
+  "description": "RepairDesign",
+  "main": "index.js",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git+http://bossem.github.io/.git"
+  },
+  "author": "bossem",
+  "license": "ISC",
+  "bugs": {
+      "url": "https://bossem.github.io//issues"
+  },
+  "homepage": "https://bossem.github.io/#readme",
+  "devDependencies": {
+      "gulp": "^4.0.2",
+      "gulp-autoprefixer": "^7.0.1",
+      "gulp-clean-css": "^4.2.0",
+      "gulp-rename": "^2.0.0",
+      "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+      "browser-sync": "^2.26.7"
+  }
 }
