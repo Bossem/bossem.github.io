@@ -379,7 +379,7 @@ $(document).ready(function() {
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
                 hintContent: 'Бойченко Роман',
-                balloonContent: 'GLO Academy'
+                balloonContent: 'RepairDesign'
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
