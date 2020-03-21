@@ -1,21 +1,21 @@
 {
-    "name": "bossem",
+    "name": "glo_academy",
     "version": "1.0.0",
-    "description": "RepairDesign",
+    "description": "glo_academy",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+http://bossem.github.io/.git"
+        "url": "git+https://bossem.github.io/RepairDesign.git"
     },
-    "author": "bossem",
+    "author": "bossem.github.io",
     "license": "ISC",
     "bugs": {
-        "url": "https://bossem.github.io//issues"
+        "url": "https://bossem.github.io/RepairDesign/issues"
     },
-    "homepage": "https://bossem.github.io/#readme",
+    "homepage": "https:bossem.github.io/RepairDesign#readme",
     "devDependencies": {
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.1",

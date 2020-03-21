@@ -1,69 +1,65 @@
 .control
   &__section-title
     margin-bottom: 2.214rem
-    margin-top: -29rem
+    margin-top: -30rem
   &__video
-    display: flex
     position: relative
+    display: flex
     margin: auto
     margin-bottom: 4.428rem
     max-width: 58.357rem
     min-height: 31rem
-    background-color: $dark
-    background-image: url('../img/control/video-bg.jpg')
-    background-repeat: no-repeat
-    background-position: center
-    background-size: 100% 100%
+    background: $dark url('../img/video-mask.jpg') center no-repeat
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
     &::before
       content: ''
       position: absolute
       width: 100%
       height: 100%
-      background-color: rgba(0, 0, 0, 0.8)
+      background-color: rgba(black, 0.8)
   &__text
-    max-width: 40.765rem
-    margin: auto
-    margin-bottom: 4.285rem
+    max-width: 40.785rem 
     text-align: center
+    margin: auto
+    margin-bottom: 4.275rem
     font-size: 1.428rem
-    line-height: 2.45rem
+    line-height: 2.4rem
     &::before
       content: ''
       display: block
       margin: auto
-      margin-bottom: 1.85rem
+      margin-bottom: 2.5rem
       width: 55px
       height: 2px
       background-color: $primary
       border-radius: 30px
   &__form
     display: flex
-    justify-content: space-between
     flex-wrap: wrap
     max-width: 55rem
     margin: auto
+    justify-content: space-between
   &__input
-    &::placeholder
-        color: $dark
     &-group
+      position: relative
       display: flex
       flex-direction: column
       flex-basis: 30%
-  &__label
-    margin-bottom: -7px
+    &--name
+      color: #000
+    &--tel
+      color: #000  
+  &__label 
+    margin-bottom: 3px 
   &__button
-    padding: 1.2rem 4.33rem
-    font-size: 1.071rem
+    padding: 1.2857rem 4.7857rem
+    margin-top: 38px    
   &__policy
     flex-basis: 100%
-    margin-top: 1.2rem
+    margin-top: 1.2rem 
     &-label
-      justify-content: center
+      justify-content: center   
 .video
   &__play
-    position: relative
-    margin: auto
-#control-user-name
-  &::placeholder
-        color: $dark
+    position: relative 
+    margin: auto     
