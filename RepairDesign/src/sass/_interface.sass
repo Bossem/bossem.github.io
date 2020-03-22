@@ -1,83 +1,136 @@
 .button
   border: none
-  padding: 11px 24px
   border-radius: 2px
   text-transform: uppercase
-  font-size: 0.93rem
-  &__contacts
-    background-color: $primary  
-  &--big
-    width: 207px
-    height: 51px
-    margin-bottom: 79px
-    margin-right: 15px
+  font-size: 0.929rem
+  font-weight: 500
+  letter-spacing: 0.025rem
   &:hover
     cursor: pointer
   &--primary
+    padding: 1.214rem 1.857rem 1.286rem 1.857rem
     background-color: $primary
     color: $light
-    box-shadow: 0px 5px 15px rgba($primary, 0.2)
+    box-shadow: 0 5px 15px rgba($primary, 0.2)
     transition: box-shadow 0.3s
     &:hover
       box-shadow: none
   &--outline
-    width: 207px
-    height: 51px
+    padding: 1.214rem 2.571rem 1.286rem 2.857rem
     border: 1px solid $light
     background-color: transparent
     color: $light
 .label
   font-size: 1.07rem
-  margin-top: 3.5rem
   &--light
     color: rgba($light, 0.5)
-  &_dark
-    color: rgba($dark, 0.5)  
 .input
+  border: none
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   background-color: transparent
-  border: none 
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3) 
   font-size: 1.285rem
   color: $light
-  padding: 0.5rem 0
+  padding: 0.53rem 0
   &--light
     &::placeholder
       color: $light
-      font-weight: 500
   &--dark
+    color: $dark
     &::placeholder
       color: $dark
-      font-size: 18px
-      line-height: 24px     
 .policy
   &__checkbox
     opacity: 0
-    visibility: hidden 
+    visibility: hidden
     &:checked +
-      .policy__label
+      .policy__label        
         &::before
-          background: $primary url('../img/check.svg') no-repeat center / 0.8rem
+          background-color: $primary
+          background-image: url("../img/check.svg")
+          background-repeat: no-repeat
+          background-position: center
   &__label
     display: flex
     align-items: center
-    font-size: 1.142rem
+    font-size: 1.143rem
     &::before
       content: ''
       width: 18px
       height: 18px
-      border: 1px solid $primary 
-      border-radius: 1px 
+      border: 1px solid $primary
+      border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
     &--center
       justify-content: center
-.invalid
-  color: tomato
-  position: absolute
-  margin-top: 7.5rem
-.input
-  position: relative
+.scrollup
+  position: fixed
+  display: hidden
+  opacity: 0
+  right: 20px
+  bottom: 20px
+  &--visible
+    display: visible
+    opacity: 1
+  &__content
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 1px solid black
+    background-color: rgba(30, 30, 30, 0.5)
+    cursor: pointer
+    color: $primary
+    font-size: 18px
+    font-weight: bold
+label
+  &.invalid
+    color: tomato
+input
   &.invalid
     border-bottom: 1px solid tomato
-    margin: 0
-       
+div
+  &.invalid
+    color: tomato
+.success-message
+  text-align: center
+  &__text
+    font-size: 1.25rem
+  &__invintation
+    margin-bottom: 0.5rem
+  &__link
+    color: $primary
+#modalCheckbox-error
+  position: absolute
+  left: 0
+  bottom: -1.5rem
+#modal-user-name-error, #modal-user-phone-error, #modal-user-email-error
+  position: absolute
+  left: 0
+  bottom: -1.5rem
+#control-user-name-error, #control-user-phone-error
+  position: absolute
+  left: 0
+  bottom: -1rem
+#controlCheckbox-error
+  position: absolute
+  left: 37%
+  bottom: -1rem
+#sampleCheckbox-error
+  position: absolute
+  left: 0
+  bottom: -1.5rem
+#sample-user-name-error, #sample-user-phone-error, #sample-user-email-error
+  position: absolute
+  left: 0
+  bottom: -1.5rem
+#footer-user-name-error, #footer-user-phone-error, #footer-user-question-error
+  position: absolute
+  left: 0
+  bottom: -1.5rem
+#footerCheckbox-error
+  position: absolute
+  left: 30%
+  bottom: -1.3rem

@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://bossem.github.io/RepairDesign.git"
+        "url": "git+https://github.com/bossem.github.io/RepairDesign/.git"
     },
-    "author": "bossem.github.io",
+    "author": "Bossem",
     "license": "ISC",
     "bugs": {
-        "url": "https://bossem.github.io/RepairDesign/issues"
+        "url": "https://github.com/bossem.github.io/RepairDesign//issues"
     },
-    "homepage": "https:bossem.github.io/RepairDesign#readme",
+    "homepage": "https://github.com/bossem.github.io/RepairDesign/#readme",
     "devDependencies": {
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.1",
