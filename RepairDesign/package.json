@@ -1,0 +1,47 @@
+{
+    "name": "glo_academy",
+    "version": "1.0.0",
+    "description": "glo_academy",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Bossem/bossem.github.io/glo_academy.git"
+    },
+    "browserslist": [
+        "> 1%",
+        "ie >= 11",
+        "edge >= 15",
+        "ie_mob >= 10",
+        "ff >= 45",
+        "chrome >= 45",
+        "safari >= 7",
+        "opera >= 23",
+        "ios >= 7",
+        "android >= 4",
+        "bb >= 10"
+    ],
+    "author": "AlexKhischenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Bossem/bossem.github.io/glo_academy/issues"
+
+    },
+    "homepage": "https://github.com/Bossem/bossem.github.io/glo_academy#readme",
+    "devDependencies": {
+        "clean-css": "^4.2.3",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.0.2"
+    },
+    "dependencies": {
+        "browser-sync": "^2.26.7",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-tinypng-compress": "^1.2.5"
+    }
+}
