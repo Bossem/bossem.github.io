@@ -1,0 +1,276 @@
+
+a
+  &:focus
+    outline: none
+    box-shadow: none
+
+.button
+  padding: 11px 24px
+
+  font-size: 0.93rem
+  text-transform: uppercase
+
+  border: none
+  border-radius: 2px
+
+  &:hover
+    cursor: pointer
+  &:active
+    outline: none
+    box-shadow: none
+
+  &--primary
+    background-color: $primary
+    color: $light
+    box-shadow: 0px 5px 15px rgba($primary, 0.2)
+    transition: box-shadow 0.3s
+    transition: background-color 0.3s
+    transition: color 0.5s
+    &:hover
+      color: $dark
+      background-color: $hoverColor
+      box-shadow: none
+    &:focus
+      outline: none
+      box-shadow: 0 0 0 2px $primary
+
+  &--outline
+    border: 1px solid $light
+    color: $light
+    background-color: transparent
+    transition: 0.4s
+    &:hover
+      color: $dark
+      background-color: $light
+    &:focus
+      outline: none
+      box-shadow: 0 0 0 3px $light
+
+.label
+  +font-FuturaBook
+  font-size: 1.07rem
+  &--light
+    color: rgba($light, 0.5)
+
+.input
+  padding: 0.5rem 0
+  font-size: 1.285rem
+  color: $light
+  background: transparent
+  border: none
+  border-radius: 0
+  border-bottom: 2px solid rgba(54,54,54,0.3)
+
+  &--light
+    &::placeholder
+      color: $light
+  &:focus
+    outline: none
+    border-bottom: 2px solid $primary
+  &:active
+    outline: none
+    border-bottom: 2px solid $primary
+
+.policy
+  &__label
+    display: flex
+    align-items: center
+    font-size: 1.142rem
+    +font-FuturaBook
+    &::before
+      content: ''
+      width: 18px
+      height: 18px
+      margin-right: 0.60rem
+      border: 1px solid $primary
+      border-radius: 2px
+      cursor: pointer
+    &--center
+      justify-content: center
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    &:checked + .policy__label::before
+      background: $primary url(../img/check.svg) no-repeat center / 0.9rem
+
+.scroll-top
+  position: fixed
+  bottom: 2rem
+  right: 1.5rem
+  width: 39px
+  height: 39px
+  cursor: pointer
+  &__button
+    // padding: 1.5rem
+    background: $dark url(../img/scrollTop.svg) no-repeat center center
+    border-radius: 50%
+    cursor: pointer
+    &--hidden
+      opacity: 1
+      visibility: hidden
+    &:hover
+      background: $dark url(../img/scrollTop2.svg) no-repeat center center
+
+//---для валидации форм 
+div
+  transition: 0.5s ease-in-out
+  &.invalid
+    text-align: center
+    color: tomato
+  &.invalid__control
+    margin-top: 0.5rem
+    text-align: center
+    color: tomato
+  &.invalid__info
+    argin-top: 0.5rem
+    text-align: center
+    color: tomato
+  &.invalid__footer
+    margin-top: 0.5rem
+    text-align: center
+    color: tomato
+
+input
+  transition: 0.5s ease-in-out
+  &.invalid
+    border-bottom: 2px solid tomato
+    &:focus
+      border-bottom: 2px solid tomato
+  &.invalid__control
+    border-bottom: 2px solid tomato
+    &:focus
+      border-bottom: 2px solid tomato
+  &.invalid__info
+    border-bottom: 2px solid tomato
+    &:focus
+      border-bottom: 2px solid tomato
+  &.invalid__footer
+    border-bottom: 2px solid tomato
+    &:focus
+      border-bottom: 2px solid tomato
+
+.control
+  &__policy
+    position: relative
+  &__input-group
+    position: relative
+    // display: block
+div.invalid__control
+  position: absolute
+  display: block
+  top: 48px
+  left: 0
+
+#controlCheckbox-error
+  font-size: 1rem
+  top: 35px
+  left: 37%
+#policyCheckbox-error
+  top: 43px
+  left: 0
+  font-size: 1rem
+
+.info-modal
+  &__policy
+    position: relative
+  &__input-group
+    position: relative
+div.invalid__info
+  position: absolute
+  display: block
+  top: 58px
+  left: 0
+
+.footer
+  &__policy
+    position: relative
+  &__input-group
+    position: relative
+
+div.invalid__footer
+  position: absolute
+  display: block
+  top: 48px
+  left: 0
+
+#footerCheckbox-error
+  font-size: 1rem
+  top: 35px
+  left: 35%
+
+.modal
+  &__policy
+    position: relative
+  &__input-group
+    position: relative
+div.invalid
+  position: absolute
+  display: block
+  top: 56px
+  left: 0
+
+.feedback
+  +font-YesevaOne
+  color: $light
+  font-size: 1.5rem
+  &__primary
+    color: $primary
+  &__description
+    font-size: 1.1rem
+    line-height: 1.5rem
+  &__link
+    color: $light
+    &:hover
+      text-decoration: none
+.review
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgba($dark, 0.6)
+  z-index: 199
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__modal
+    position: relative
+    max-width: 36.36rem
+    padding: 2.357rem 3.5rem 1.928rem
+    color: $light
+    background: $dark url(../img/bg-lines.png) no-repeat center
+    z-index: 999
+  &__close
+    position: absolute
+    top: 0
+    right: 0
+    width: 28px
+    height: 28px
+    margin: 12px
+    background: transparent url(../img/x-circle.svg) no-repeat center
+    border: none
+    cursor: pointer
+    &:focus
+      outline: none
+    &:hover
+      background: transparent url(../img/x-circle2.svg) no-repeat center
+
+.bg-lines
+  display: block
+  background: url(../img/lineTypeInfo.svg) no-repeat top / cover
+  width: 100%
+  height: 100%
+  z-index: -99999
+
+.bg-lines-team
+  display: block
+  background: url(../img/lineTypeInfo.svg) no-repeat top / cover
+  width: 100%
+  height: 100%
