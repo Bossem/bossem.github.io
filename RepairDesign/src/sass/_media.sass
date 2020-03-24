@@ -31,7 +31,9 @@
       min-height: 5rem
   .row
     padding: 0
+  .design
   .sample
+    padding-top: 8rem
     &-image
       width: 80%
     &__image
@@ -64,6 +66,11 @@
           margin: 0
 
 @media screen and ( max-width: 992px )
+  .scrollup
+    &__content
+      &:hover
+        transform: none
+        box-shadow: none
   .menu
     &__logo
       margin-left: 1.5rem
@@ -71,6 +78,8 @@
       margin-right: 1.5rem
   .nav
     &__item
+      &:hover
+        color: $light
       &:nth-of-type(n+2):nth-of-type(-n+6)
         margin-left: 1.643rem
   .button
@@ -117,6 +126,8 @@
           margin: 0 auto
       &--visible
         display: none
+  .projects
+    background-image: none
   .swiper1
     &__slide
       padding-bottom: 2rem
@@ -135,9 +146,29 @@
   .col-60
     width: 100%
     order: -1
+  .control
+    padding-bottom: 3rem
   .types
     &__card
-      margin-bottom: 5.6rem
+      margin-bottom: 7rem
+  .implement
+    padding-bottom: 4.5rem
+    background: none
+    &::before
+      display: none
+    &__title
+      max-width: 25rem
+      margin-bottom: 2rem
+      font-size: 1.428rem
+    &__row
+      display: none
+  .section
+    &-title
+      &--hidden
+        display: block
+  .swiper4
+    &--hidden
+      display: block
   .sample
     display: none
   .design
@@ -145,6 +176,7 @@
       margin-bottom: 5.6rem
   .steps    
     display: none
+    background-image: none
   .team
     margin-top: 60px
     padding-top: 2rem
@@ -165,10 +197,17 @@
         margin-left: 1.5rem
   .customers
     display: none
+  .team-customers
+    background-image: none
   .footer
     &__wrap
       margin-top: auto
       min-height: 0
+  .address
+    &__icon
+      &:hover
+        transform: none
+        box-shadow: none
 
 @media screen and ( max-width: 760px )
   .nav
@@ -228,6 +267,15 @@
     &__pricetag
       width: 15.833rem
       font-size: 1.25rem
+  .implement
+    &__title
+      max-width: 30rem
+      margin-bottom: 2.7rem
+  .swiper4
+    &__next
+      left: 89% !important
+    &__prev
+      left: 6% !important
   .design
     margin-bottom: 0
     padding-top: 3rem
@@ -288,7 +336,7 @@
     width: 100%
     padding-left: 0  
   .control
-    padding-top: 2.9rem
+    padding-top: 4rem
     padding-bottom: 0
     background-color: $dark
     &__section
@@ -323,7 +371,7 @@
       &::placeholder
         color: $light
     &__policy
-      margin-top: -4.2rem
+      margin-top: -2rem
       margin-bottom: 5.1rem
       color: $light
       &-label
@@ -345,10 +393,18 @@
       width: 5.083rem
       height: 5.083rem
   .types
-    padding-top: 5.3rem
+    padding-top: 7rem
+  .implement
+    padding-bottom: 10rem
+  .swiper4
+    &__next
+      left: 88% !important
+    &__prev
+      left: 3% !important
   .design
+    margin-top: -20rem
     margin-bottom: 0
-    padding-top: 3rem
+    padding-top: 15rem
     background-color: $dark
   .team
     margin-top: 0
@@ -404,7 +460,8 @@
       width: 100%
       font-size: 1.25rem
     &__policy
-    margin-bottom: 3.3rem
+      margin-top: 2rem
+      margin-bottom: 2.5rem
     &__map
       order: -1
       margin-bottom: 0
@@ -419,7 +476,7 @@
       display: none
   #footerCheckbox-error
     left: 0
-    bottom: 0
+    bottom: 1.5rem
   .policy
     &__label
       &--center
@@ -442,5 +499,23 @@
         box-shadow: none
   .scrollup
     display: none
+
+@media screen and ( max-height: 500px )
+  .hero
+    &__content
+      margin: 0
+      max-width: 42rem
+    &__title
+      font-size: 1.5rem
+    &__text
+      max-width: 40rem
+      margin-bottom: 1.5rem
+      font-size: 1.3rem
+      line-height: normal
+    &__button
+      display: inline-block
+      width: 40%
+      padding-top: 1rem
+      padding-bottom: 1rem
 
       

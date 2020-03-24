@@ -26,7 +26,7 @@ try {
 
     //Recipients
     $mail->setFrom('rbojcenko2018@gmail.com');
-    $mail->addAddress('rbojcenko2018@gmail.com');      // Add a recipient
+    $mail->addAddress('prockopiv.roman2015@yandex.ru');      // Add a recipient
     
     // Content
     $mail->isHTML(true);                              // Set email format to HTML

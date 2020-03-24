@@ -21,6 +21,14 @@ $(document).ready(function () {
   let modalForm = $('.modal__form');
   let modalSuccessMessage = $('.modal__success-message');
 
+  // Lazy load для картинок
+  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+    img.setAttribute('src', img.getAttribute('data-src'));
+    img.onload = function() {
+    img.removeAttribute('data-src');
+    };
+  });
+
   //Подключение библиотеки анимации
   new WOW().init();
 
@@ -48,12 +56,12 @@ $(document).ready(function () {
   });
 
   // Вызов модального окна любой из кнопок
-  modalBtn.click( () => {
+  modalBtn.click( function () {
     modal.toggleClass('modal--visible');
   });
 
   // Закрытие модального окна крестиком
-  closeBtn.click( () => {       
+  closeBtn.click( function () {       
     modal.toggleClass('modal--visible');   
     if (modalSuccessMessage.hasClass('modal__success-message--visible')) {
       modalSuccessMessage.removeClass('modal__success-message--visible');
@@ -67,12 +75,12 @@ $(document).ready(function () {
   });
 
   // Закрытие модального окна об успешной отправке крестиком
-  closeSuccessBtn.click( () => {       
+  closeSuccessBtn.click( function () {       
     modalSuccess.removeClass('modal-success--visible');      
   });
   
   // Закрытие модального окна клавишей Esc
-  $(document).keydown((event) => {
+  $(document).keydown( function(event) {
     if (modal.hasClass('modal--visible')) {
       if (event.which == 27) {        
         modal.toggleClass('modal--visible');        
@@ -81,14 +89,14 @@ $(document).ready(function () {
   });
 
   // Закрытие модального окна кликом вне модального окна
-  modal.click((e) => {
+  modal.click( function(e) {
     if (modal.is(e.target) && modal.has(e.target).length === 0) {
       modal.toggleClass('modal--visible');
     };
   });
 
   // Кнопка возврата в начало страницы
-  $(window).scroll( () => {
+  $(window).scroll( function () {
     if ($(this).scrollTop() > 150) {
       scrollUpBtn.addClass('scrollup--visible');
       scrollUpBtn.fadeIn();
@@ -97,22 +105,19 @@ $(document).ready(function () {
       scrollUpBtn.removeClass('scrollup--visible');
     }    
   });
-  scrollUpBtn.click( () => {
+  scrollUpBtn.click( function () {
     $('html').animate({scrollTop : 0}, 900);
   });
 
-
-
 // Инициализация слайдера "Завершенные проекты"
-var mySwiper1 = new Swiper ('.swiper1', {  
-  loop: true,
+var mySwiper1 = new Swiper ('.swiper1', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper1__next',
+    prevEl: '.swiper1__prev',
   },
 });
 
@@ -140,8 +145,19 @@ var mySwiper3 = new Swiper ('.swiper3', {
   },  
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper2-next',
+    prevEl: '.swiper2-prev',
+  },
+});
+var mySwiper4 = new Swiper ('.swiper4', {
+  fadeEffect: {
+    crossFade: true
+  },
+  effect: 'fade',  
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper4__next',
+    prevEl: '.swiper4__prev',
   },
 });
 
@@ -163,8 +179,8 @@ getAllSwipers = $('.swiper2__item');
 getPrevClick = $('.swiper2-prev');
 getNextClick = $('.swiper2-next');
 
-// Переключение активного разеда по кнопке вперед
-getNextClick.click( () => {
+// Переключение активного раздела по кнопке вперед
+getNextClick.click( function () {
   if (mySwiper3.activeIndex === 0) {
     getAllSteps.each(function (indes, element) {
       $(element).removeClass('active');    
@@ -204,7 +220,7 @@ getNextClick.click( () => {
 });
 
 // Переключение активного разеда по кнопке назад
-getPrevClick.click( () => {
+getPrevClick.click( function () {
   if (mySwiper3.activeIndex === 0) {
     getAllSteps.each(function (indes, element) {
       $(element).removeClass('active');    
@@ -244,7 +260,7 @@ getPrevClick.click( () => {
 });
 
 // Переключение слайдеров нажатием на раздел
-$('.steps-content__step--1').click( () => {
+$('.steps-content__step--1').click( function () {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
   });
@@ -252,35 +268,35 @@ $('.steps-content__step--1').click( () => {
   mySwiper3.slideTo(0, 700); 
 });
 
-$('.steps-content__step--2').click( () => {
+$('.steps-content__step--2').click( function () {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
   });
   $('.steps-content__step--2').addClass('active');
   mySwiper3.slideTo(1, 700); 
 });
-$('.steps-content__step--3').click( () => {
+$('.steps-content__step--3').click( function () {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
   });
   $('.steps-content__step--3').addClass('active');
   mySwiper3.slideTo(2, 700); 
 });
-$('.steps-content__step--4').click( () => {
+$('.steps-content__step--4').click( function () {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
   });
   $('.steps-content__step--4').addClass('active');
   mySwiper3.slideTo(3, 700); 
 });
-$('.steps-content__step--5').click( () => {
+$('.steps-content__step--5').click( function () {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
   });
   $('.steps-content__step--5').addClass('active');
   mySwiper3.slideTo(4, 700); 
 });
-$('.steps-content__step--6').click( () => {
+$('.steps-content__step--6').click( function () {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
   });
@@ -477,4 +493,30 @@ ignore: ":disabled",
 // Маска для номера телефона
 $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
+// Временное тестовое решение
+let sampleDialog = $('.sample__dialog');
+let moneyboxContainer = $('.moneybox__container');
+moneyboxContainer.click( function () {
+  sampleDialog.fadeOut(500);
+  sampleDialog.addClass('sample__dialog--hidden');
+  sampleDialog.fadeIn(500);
+  sampleDialog.removeClass('sample__dialog--hidden');
+  });
+
+// Перелистывание галереи с картинками
+let gallary = $('.gallary');
+let implementListItem = $('.implement__list-item');
+implementListItem.click(function () {
+  implementListItem.removeClass('implement__list-item--active');
+  $(this).addClass('implement__list-item--active');
+  gallary.fadeOut(500);
+  gallary.addClass('gallary--hidden');
+  // gallary.fadeIn(500);
+  for (i = 1; i < 12; i++) {
+    if ($(this).hasClass('item-' + i)) {
+      $('.gallary-' + i).fadeIn(500);
+      $('.gallary-' + i).removeClass('gallary--hidden');
+    }
+  };  
+})
 });
