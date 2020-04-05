@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jetro</title>
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#">
+            <span>Jet</span>Ro
+          </a>
+        </div>
+
+
+        <nav class="header__menu">
+          <ul class="nav-links menu">
+            <li class="nav-link"><a class="header-link active" href="#">Home</a></li>
+            <li class="nav-link"><a class="header-link" href="#">About Us</a></li>
+            <li class="nav-link"><a class="header-link" href="#">Blog</a></li>
+            <li class="nav-link"><a class="header-link" href="#">Portfolio</a></li>
+            <li class="nav-link"><a class="header-link" href="#">Contact US</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__menu-btn" onClick="menuToggle()">
+          <div class="header__menu-row"></div>
+          <div class="header__menu-row"></div>
+          <div class="header__menu-row"></div>
+        </div>
+
+        <div class="menu-overlay">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact US</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <section class="slider-top">
+    <div class="container">
+      <div class="slider__inner">
+        <div class="slider-for">
+          <div class="slider__item" style="background-image: url(images/slide-1.jpg)">
+            <div class="slider__item-wrapper">
+              <div class="slider__item-title">slide one</div>
+              <div class="slider__item-text">Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                adolescens vim te, per at tritani aperiri.
+                Adhuc invenire convenire his ea.</div>
+            </div>
+          </div>
+          <div class="slider__item" style="background-image: url(images/slide-2.jpg)">
+            <div class="slider__item-wrapper">
+              <div class="slider__item-title">slide two</div>
+              <div class="slider__item-text">Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                adolescens
+                vim te, per at tritani aperiri.
+                Adhuc invenire convenire his ea.</div>
+            </div>
+          </div>
+          <div class="slider__item" style="background-image: url(images/slide-3.jpg)">
+            <div class="slider__item-wrapper">
+              <div class="slider__item-title">slide three</div>
+              <div class="slider__item-text">Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                adolescens
+                vim te, per at tritani aperiri.
+                Adhuc invenire convenire his ea.</div>
+            </div>
+          </div>
+          <div class="slider__item" style="background-image: url(images/slide-4.jpg)">
+            <div class="slider__item-wrapper">
+              <div class="slider__item-title">slide four</div>
+              <div class="slider__item-text">Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                adolescens
+                vim te, per at tritani aperiri.
+                Adhuc invenire convenire his ea.</div>
+            </div>
+          </div>
+          <div class="slider__item" style="background-image: url(images/slide-5.jpg)">
+            <div class="slider__item-wrapper">
+              <div class="slider__item-title">slide five</div>
+              <div class="slider__item-text">Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                adolescens
+                vim te, per at tritani aperiri.
+                Adhuc invenire convenire his ea.</div>
+            </div>
+          </div>
+          <div class="slider__item" style="background-image: url(images/slide-6.jpg)">
+            <div class="slider__item-wrapper">
+              <div class="slider__item-title">slide six</div>
+              <div class="slider__item-text">Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                adolescens
+                vim te, per at tritani aperiri.
+                Adhuc invenire convenire his ea.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-nav">
+          <div class="slider__item item-nav" style="background-image: url(images/slide-1.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-2.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-3.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-4.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-5.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-6.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-1.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-2.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-3.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-4.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-5.jpg)"></div>
+          <div class="slider__item item-nav" style="background-image: url(images/slide-6.jpg)"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="specialised">
+    <div class="container">
+      <div class="specialised__inner">
+
+        <div class="specialised__item">
+          <div class="specialised__item-head">
+            <img src="images/icon1-specialised.svg" alt="иконка1">
+            <div class="specialised__item-title">
+              Check out my latest
+              portfolio items
+            </div>
+          </div>
+          <div class="specialised__item-text">
+            Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed
+            magna posue re
+            ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum
+            iaculis.
+            Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+          </div>
+          <a class="specialised__item-button" href="#">more</a>
+        </div>
+
+        <div class="specialised__item">
+          <div class="specialised__item-head">
+            <img src="images/icon2-specialised.svg" alt="иконка2">
+            <div class="specialised__item-title">
+              Offer Top Notch Quality
+              Work & Services
+            </div>
+          </div>
+          <div class="specialised__item-text">
+            Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed
+            magna posue re
+            ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum
+            iaculis.
+            Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+          </div>
+          <a class="specialised__item-button" href="#">more</a>
+        </div>
+
+        <div class="specialised__item">
+          <div class="specialised__item-head">
+            <img src="images/icon3-specialised.svg" alt="иконка3">
+            <div class="specialised__item-title">
+              Follow Me on Twitter,
+              Facebook & Pinterest
+            </div>
+          </div>
+          <div class="specialised__item-text">
+            Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed
+            magna posue re
+            ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum
+            iaculis.
+            Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+          </div>
+          <a class="specialised__item-button" href="#">more</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="works">
+    <div class="container">
+      <div class="works__title">
+        <div class="works__title-text">recent works</div>
+        <div class="works__title-box">
+          <img src="images/line.png" alt="line">
+        </div>
+      </div>
+      <div class="works__inner">
+
+        <a href="#">
+          <div class="works__item">
+            <div class="works__item-img">
+            <img src="images/works-img1.jpg" alt="photo">
+            </div>
+            <div class="works__item-box">
+              <div class="works__item-title">Character Design</div>
+              <div class="works__item-date">June 15, 2012</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="works__item">
+            <div class="works__item-img">
+            <img src="images/works-img2.jpg" alt="photo">
+            </div>
+            <div class="works__item-box">
+              <div class="works__item-title">Brochure Design</div>
+              <div class="works__item-date">June 15, 2012</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="works__item">
+            <div class="works__item-img">
+            <img src="images/works-img3.jpg" alt="photo">
+            </div>
+            <div class="works__item-box">
+              <div class="works__item-title">Social Media Buttons</div>
+              <div class="works__item-date">June 15, 2012</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="works__item">
+            <div class="works__item-img">
+            <img src="images/works-img4.jpg" alt="photo">
+            </div>
+            <div class="works__item-box">
+              <div class="works__item-title">10 Amazing Websites</div>
+              <div class="works__item-date">June 15, 2012</div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__item footer__item-about">
+          <div class="footer__item-title">About Jetro</div>
+          <div class="footer__item-content">
+            <p class="footer__content-text">
+              Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te, per at
+              tritani aperiri.
+              Adhuc invenire convenire his ea. Id mei vitae denique, in eam commodo veritus disputando.
+            </p>
+            <p class="footer__content-text">
+              Pro et erant delicata, eu vim essent imperdiet accommodare, dictas deseruisse ius an. Solet everti
+              definitionem id ius,
+              sonet oporteat cu vim.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__item footer__item-twitter">
+          <div class="footer__item-title">Twitter Widget</div>
+          <div class="footer__item-content">
+            <div class="footer__pixelmater">
+              <a href=#>@pixelmater</a>What an awesome design with great functionality :)
+            </div>
+            <div class="footer__date">about 1 hour ago</div>
+            <div class="footer__designdude">
+              <a href=#>@designdude</a>What an awesome design with great functionality :)
+            </div>
+            <span class="footer__date">about 2 hour ago</span>
+            <div class="footer__bestpsdfreebies">
+              Follow<a href=#>@bestpsdfreebies</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__item footer__item-contact">
+          <div class="footer__item-title">Contact Us</div>
+          <div class="footer__item-content">
+            <div class="footer__content-text">
+              Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te, per at
+              tritani aperiri.
+            </div>
+            <div class="footer__content-info">
+              <a href="mailto:information@jetro.com">information@jetro.com</a>
+              <a href="tel:12223334444">1.222.333.4444</a>
+            </div>
+          </div>
+          <ul class="footer__social">
+            <li><a href="#"><img src="images/footer-icons/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/footer-icons/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/footer-icons/email.png" alt=""></a></li>
+            <li><a href="#"><img src="images/footer-icons/rss.png" alt=""></a></li>
+            <li><a href="#"><img src="images/footer-icons/vimeo.png" alt=""></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

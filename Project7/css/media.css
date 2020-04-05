@@ -1,0 +1,137 @@
+@media (max-width: 1500px) {
+  .slider__inner::after,
+  .slider__inner::before,
+  .footer__inner::after,
+  .footer__inner::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer__inner {
+    padding: 20px;
+    justify-content: space-around;
+  }
+  .footer__item {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__inner {
+    justify-content: space-around;
+  }
+  .works__title-box {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .specialised__inner {
+    flex-wrap: wrap;
+  }
+  .specialised__item {
+    margin-bottom: 40px;
+  }
+  .footer__inner {
+    flex-wrap: wrap;
+  }
+  .footer__item-twitter {
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  .header__inner {
+    justify-content: space-between;
+  }
+  .header__menu {
+    display: none;
+  }
+  /* hamburger */
+  .header__menu-btn {
+    display: block;
+    margin-right: 10px;
+    z-index: 1;
+    background-color: #fff;
+  }
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+  }
+  #menu a {
+    font-weight: 400;
+    font-size: 40px;
+    padding: 50px;
+  }
+  nav #menu {
+    display: none;
+  }
+  #resize li:nth-child(1) {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 686px) {
+  .works__inner {
+    justify-content: space-around;
+  }
+  .works__item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 619px) {
+  .specialised__inner {
+    justify-content: center;
+  }
+  .works__title {
+    text-align: center;
+  }
+  .works {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider__item-wrapper {
+    width: 308px;
+    padding: 13px 10px 13px 10px;
+  }
+  .footer__item {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+  #menu a {
+    padding: 0;
+  }
+}
+
+@media (max-width: 379px) {
+  .slider__item-wrapper {
+    width: 280px;
+    padding: 13px 10px 13px 10px;
+    left: 10px;
+  }
+  .slider__item-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  #resize li:nth-child(1) {
+    margin-top: 55px;
+  }
+}
+
+@media (min-width: 769px) {
+  #resize {
+    visibility: hidden !important;
+  }
+}
